@@ -1,4 +1,29 @@
 avatar:
-  url: images/avatar.jpg
+  url:  images/avatar.jpg
   rounded: true
   opacity: 1
+
+colors:
+  primary: "#6200ee" #主色调
+
+title: 尼伯龙根
+subtitle: 'Niebelungen'
+description: '或许是不知梦的缘故，流离之人追逐幻影'
+keywords:
+author: BlockedByRain
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+
+# UI
+banner:
+  enable: true
+  title: 尼伯龙根
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "blue"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line

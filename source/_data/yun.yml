@@ -27,3 +27,6 @@ banner:
   go_down:
     enable: true
     icon: icon-arrow-down-s-line
+
+archive:
+  last_word: 往前一片虚无

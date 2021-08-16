@@ -1,6 +1,4 @@
 # 如果没有消息后缀，默认提交信息为 `update content`
-hexo clean
-hexo g
 info=$1
 if ["$info" = ""];
 then info=":update content"

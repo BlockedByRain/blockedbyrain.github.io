@@ -1,38 +1,17 @@
 ---
 title: Hello World
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+## 说明
+按照惯例这一篇应该是本博客的搭建过程，而我在做的过程中也确实写（抄）了一点小心得，不过做到后面发现有许多问题自己都搞不明白。再加上我本人并非前端出身也不太考虑往这方面深度发展，所以还是不放出来误人子弟了。
+这里就简单说一下自己遇到的坑。
 
-## Quick Start
+## 心得
 
-### Create a new post
+### SSH密钥
+如果没有进行密钥的配置在本地完成改动后提交将会导致提交失败，具体过程可以参照末尾的链接
 
-``` bash
-$ hexo new "My New Post"
-```
+### 主分支命名
+hexo框架中的配置文件默认将生成的博客发布在master分支，但是GitHub已经在2020年将其更改为main（具体为什么我也不知道），所以在部署前要记得将其改为main或者在GitHub上该仓库的主分支重新命名为master。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+## 有关hexo博客搭建教程
+这里大多是我搭建博客中所用到的教程，希望能给后来者一点帮助。

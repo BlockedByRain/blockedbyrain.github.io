@@ -1,7 +1,22 @@
+# custom
 .DS_Store
 Thumbs.db
-db.json
-*.log
+tmp
+temp/
+
+# editor
+.vscode
+
+# lock
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
+# dev
 node_modules/
+*.log
+
+# dist
 public/
+db.json
 .deploy*/

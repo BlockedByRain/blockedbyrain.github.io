@@ -16,8 +16,9 @@ jobs:
         with:
           node-version: "14.x"
 
-      - run: yarn
-      - run: yarn build
+      - run: |
+          hexo clean
+          hexo g
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

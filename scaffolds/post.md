@@ -12,4 +12,3 @@ categories:
 
 The story is not over.
 
-<!-- Q.E.D. -->

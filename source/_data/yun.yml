@@ -60,7 +60,7 @@ social:
     link: 1596127831@qq.com
     icon: icon-mail-line
     color: "#8E71C1"
-  - name: 哔哩哔哩
+  - name: BiliBili
     link: https://space.bilibili.com/398359192
     icon: icon-bilibili-line
     color: "#FF8EB3"
@@ -68,3 +68,8 @@ social:
     link: https://travellings.link
     icon: icon-send-plane-2-line
     color: black
+
+types:
+    github:
+    color: black
+    icon: icon-github-line

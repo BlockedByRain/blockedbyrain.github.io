@@ -1,7 +1,7 @@
 ---
 title: BlogHistory
 date: 2021-08-16 22:06:03
-type: about
+type: "about"
 updated: 2021-08-16 22:06:03
 aplayer: true
 reward: true

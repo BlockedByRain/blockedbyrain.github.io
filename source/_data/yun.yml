@@ -14,7 +14,6 @@ author: BlockedByRain
 language: zh-CN
 timezone: 'Asia/Shanghai'
 
-
 # UI
 banner:
   enable: true
@@ -30,3 +29,42 @@ banner:
 
 archive:
   last_word: 往前一片虚无……
+
+footer:
+  since: 2021
+  # Icon between year and copyright info.
+  icon:
+    # `heart` is recommended with animation in red (#ff0000).
+    name: icon-cloud-line
+    # If you want to animate the icon, set it to true.
+    animated: true
+    # Change the color of icon, using Hex Code.
+    color: "#0078E7"
+  live_time:
+    enable: ture
+    prefix: 此处已存续
+    suffix: 
+    start_time: "2021-08-14T18:59:07"
+
+
+social:
+  - name: QQ
+    link: https://wpa.qq.com/msgrd?v=3&uin=1596127831&site=qq&menu=yes
+    icon: icon-qq-line
+    color: "#12B7F5"
+  - name: GitHub
+    link: https://github.com/BlockedByRain
+    icon: icon-github-line
+    color: "#181717"
+  - name: E-Mail
+    link: 1596127831@qq.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+  - name: 哔哩哔哩
+    link: https://space.bilibili.com/398359192
+    icon: icon-bilibili-line
+    color: "#FF8EB3"
+  - name: Travelling
+    link: https://travellings.link
+    icon: icon-send-plane-2-line
+    color: black

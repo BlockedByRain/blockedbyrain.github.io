@@ -76,3 +76,12 @@ types:
 
 reward:
   enable: false
+
+menu:
+  custom:
+    title: 关于本站
+    path: /about/site
+    icon: icon-settings-line
+
+wordcount:
+  enable: true

@@ -73,3 +73,6 @@ types:
     github:
     color: black
     icon: icon-github-line
+
+reward:
+  enable: false

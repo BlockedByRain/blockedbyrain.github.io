@@ -55,7 +55,7 @@ social:
   - name: GitHub
     link: https://github.com/BlockedByRain
     icon: icon-github-line
-    color: "#181717"
+    color: "#111111"
   - name: E-Mail
     link: 1596127831@qq.com
     icon: icon-mail-line

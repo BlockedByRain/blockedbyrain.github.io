@@ -10,7 +10,7 @@ categories:
 
 迎来第三个十年
 
-![hello-twenty](20-years-old.assets/hello-twenty.png)
+![hello-twenty](source\images\hello-twenty.png)
 
 
 ---

@@ -22,7 +22,7 @@ banner:
   border: true
   cloud:
     enable: true
-    color: "blue"
+    color: "white"
   go_down:
     enable: true
     icon: icon-arrow-down-s-line
@@ -46,7 +46,7 @@ footer:
     suffix: 
     start_time: "2021-08-14T18:59:07"
 
-
+#社交链接
 social:
   - name: QQ
     link: https://wpa.qq.com/msgrd?v=3&uin=1596127831&site=qq&menu=yes
@@ -74,8 +74,10 @@ types:
     color: black
     icon: icon-github-line
 
+#打赏
 reward:
   enable: false
+
 
 menu:
   custom:
@@ -83,5 +85,58 @@ menu:
     path: /about/site
     icon: icon-settings-line
 
+#字数
 wordcount:
   enable: true
+
+#公告
+notice:
+  enable: true
+  content: Thanks for playing my game.
+
+#一言
+say:
+  api: https://el-bot-api.vercel.app/api/words/young
+  hitokoto:
+    enable: false
+
+#光标
+cursor:
+  enable: true
+
+
+search:
+  modal: true
+  bg_image: https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/stars-timing-2.jpg
+  dark_bg_image: xxx
+  # placeholder:
+
+#友链
+pages:
+  - name: 我的小伙伴们
+    url: /links/
+    icon: icon-genderless-line
+    color: dodgerblue
+
+#相册
+albums:
+  enable: true
+
+#搜索
+engine_search:
+  enable: false
+local_search:
+  enable: true
+  src: /js/search/local-search.js
+
+#词云
+wordcloud:
+  enable: true
+  height: 350
+
+#代码块
+codeblock:
+  copy_btn: true
+  prismjs:
+    light: default
+    dark: tomorrow

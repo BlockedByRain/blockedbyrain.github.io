@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: 尼伯龙根
+subtitle: 'Niebelungen'
+description: '或许是不知梦的缘故，流离之人追逐幻影'
 keywords:
-author: John Doe
+author: BlockedByRain
 language: zh-CN
-timezone: ''
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -97,7 +97,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yun
+theme: hexo-theme-butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment

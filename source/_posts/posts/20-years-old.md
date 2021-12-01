@@ -10,7 +10,8 @@ categories:
 
 迎来第三个十年
 
-![hello-twenty](/img/hello-twenty.png)
+![hello-twenty](..\..\images\hello-twenty.png)
+
 
 
 ---

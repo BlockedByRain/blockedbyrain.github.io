@@ -10,7 +10,9 @@ categories:
 
 迎来第三个十年
 
+
 ![hello-twenty](..\..\images\posts\20-years-old\hello-twenty.png)
+![hello-twenty](..\..\..\img\posts\20-years-old\hello-twenty.png)
 
 
 

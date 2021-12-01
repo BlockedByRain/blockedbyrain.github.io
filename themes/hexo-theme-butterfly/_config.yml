@@ -3,18 +3,18 @@
 # --------------------------------------
 
 menu:
-  首页: / || fas fa-home
-  时间轴: /archives/ || fas fa-archive
-  标籤: /tags/ || fas fa-tags
-  分类: /categories/ || fas fa-folder-open
+  万花生处: / || fas fa-home
+  历历浮生: /archives/ || fas fa-archive
+  折叶为记: /tags/ || fas fa-tags
+  人世百态: /categories/ || fas fa-folder-open
 
   ##清单||fa fa-heartbeat:
     ##音乐: /music/ || fas fa-music
     ##照片: /Gallery/ || fas fa-images
     ##电影: /movies/ || fas fa-video
 
-  友链: /link/ || fas fa-link
-  关于: /about/ || fas fa-heart
+  高山仰止: /link/ || fas fa-link
+  我之为我: /about/ || fas fa-heart
   # Home: / || fas fa-home
   # Archives: /archives/ || fas fa-archive
   # Tags: /tags/ || fas fa-tags

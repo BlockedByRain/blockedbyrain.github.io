@@ -1,7 +1,6 @@
 ---
 title: 关于暴击
 date: 2021-12-01 21:30:55
-updated: 2021-12-01 21:30:55
 tags:
     游戏设计
 categories:

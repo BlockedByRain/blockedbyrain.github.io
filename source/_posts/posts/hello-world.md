@@ -1,7 +1,6 @@
 ---
 title: Hello World
 date: 2021-08-14 18:59:07
-updated: 2021-08-16 21:59:07
 tags:
     建站
 categories:

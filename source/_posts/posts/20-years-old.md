@@ -5,6 +5,11 @@ tags:
     成长  
 categories:
     时光
+top_img:
+    /images/posts/20-years-old/hello-twenty.png
+cover:
+    /images/posts/20-years-old/hello-twenty.png
+
 ---
 
 迎来第三个十年

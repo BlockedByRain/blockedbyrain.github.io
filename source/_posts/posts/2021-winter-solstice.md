@@ -4,7 +4,12 @@ date: 2021-12-21 23:04:07
 tags:
     冬至
 categories:
-	时光
+    时光
+top_img:
+    
+cover:
+    /images/posts/2021-winter-solstice/2021-winter-solstice.jpg
+
 ---
 
 差不多冬至，一早一晚还是有雨

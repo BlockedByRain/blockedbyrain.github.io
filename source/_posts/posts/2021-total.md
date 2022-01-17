@@ -6,6 +6,11 @@ tags:
 	总结
 categories:
 	时光
+top_img:
+    /images/topimg/2.jpg
+cover:
+    /images/topimg/2.jpg
+
 ---
 
 # 总述

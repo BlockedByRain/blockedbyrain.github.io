@@ -2,7 +2,9 @@
 title: 如何展示你的游戏Demo
 date: 2021-12-15 15:59:20
 tags:
+    游戏设计
 categories:
+    笔记
 ---
 # 展示要点
 

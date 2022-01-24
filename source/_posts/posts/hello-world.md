@@ -45,11 +45,23 @@ hexo框架中的配置文件默认将生成的博客发布在master分支，但�
 
 [Butterfly文档](https://butterfly.js.org/)
 
+### 他山之石
+
+所谓他山之石可以攻玉，直接贴别人的整理吧（其实就是懒）。
+
+[Github+Hexo 建站记录](https://www.bearchild.top/2021/05/28/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/)
+
+[Hexo-Butterfly主题博客搭站记录](https://www.drflower.top/posts/5920b38e/)
+
+[把Hexo部署到云服务器](https://www.drflower.top/posts/963961c3/)
+
 ## 后记
 由于技术水平有限，以后可能会慢慢对博客进一步优化，本篇会不定期更新。
 ~~敬请期待~~。
 
 最后更新时间：
 ---
+
+2022年1月18日02点23分
 
 The story is not over.

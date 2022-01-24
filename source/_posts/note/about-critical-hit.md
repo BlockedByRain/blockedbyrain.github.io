@@ -5,6 +5,10 @@ tags:
     游戏设计
 categories:
     笔记
+top_img:
+    /images/topimg/1.jpg
+cover:
+    /images/topimg/1.jpg
 ---
 # 起源
 

@@ -7,15 +7,15 @@ tags:
 categories:
 	时光
 top_img:
-    /images/topimg/2.jpg
+    /images/posts/2021-total/top.jpg
 cover:
-    /images/topimg/2.jpg
+    /images/posts/2021-total/top.jpg
 
 ---
 
 # 总述
 
-转眼到了2021的最后一天，最黑暗的十二月也要过去了。
+转眼到了2021的最后一天，~~最黑暗的~~十二月也要过去了。
 
 作业、考试、大作业、实验、四级，无数的东西堆在几周里，焦虑的同时不免烦躁，而对于我这样一个摆烂的人来说甚至偷摸着分出时间来打了几天游戏，只能说不愧是我。
 

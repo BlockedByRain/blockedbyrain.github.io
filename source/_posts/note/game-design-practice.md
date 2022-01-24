@@ -9,7 +9,8 @@ top_img:
     /images/topimg/1.jpg
 cover:
     /images/topimg/1.jpg
-
+sticky:
+    99
 ---
 
 # 前言
@@ -33,6 +34,10 @@ cover:
 
 展示你的Demo需要注意的点以及一些技巧
 [如何展示你的游戏Demo](https://blockedbyrain.github.io/2021/12/15/note/show-your-game/)
+
+蒸蒸日上！
+
+[]()
 
 ---
 

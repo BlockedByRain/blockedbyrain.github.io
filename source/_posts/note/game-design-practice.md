@@ -28,7 +28,6 @@ sticky:
 
 # 索引
 
-
 暴击背后的分析与理解
 [关于暴击](https://blockedbyrain.github.io/2021/12/01/note/about-critical-hit/)
 
@@ -37,7 +36,11 @@ sticky:
 
 蒸蒸日上！
 
-[]()
+[三国杀的个人理解](https://blockedbyrain.github.io/2022/01/25/note/about-sanguosha/)
+
+五分钟让你了解策划是干嘛的
+
+[策划职能解析]()
 
 ---
 

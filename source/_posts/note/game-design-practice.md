@@ -35,12 +35,14 @@ sticky:
 [如何展示你的游戏Demo](https://blockedbyrain.github.io/2021/12/15/note/show-your-game/)
 
 蒸蒸日上！
-
 [三国杀的个人理解](https://blockedbyrain.github.io/2022/01/25/note/about-sanguosha/)
 
 五分钟让你了解策划是干嘛的
+[策划职能解析](https://blockedbyrain.github.io/2022/01/30/note/designer-responsibilities/)
 
-[策划职能解析]()
+原神的伤害计算及一些浅薄思考
+[原神的伤害计算](https://blockedbyrain.github.io/2022/02/11/note/Genshin-damage/)
+
 
 ---
 

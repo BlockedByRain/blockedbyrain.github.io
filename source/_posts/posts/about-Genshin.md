@@ -46,6 +46,10 @@ cover:
 
 虽然本人并非什么超级大氪佬，但是作为一个月卡党自认还是对游戏有一定的理解的，这里就斗胆将自己的粗浅理解整理整理。
 
+粗略概括，主要是给自己当个提示。
+
+![system](/images/posts/about-Genshin/system.png)
+
 # 深渊记录
 
 由于开服弃坑快两个月，练度也掉了很多，没有温蒂更是受苦。贴一下记录吧。
@@ -69,6 +73,8 @@ cover:
 ![2021.7.30](/images/posts/about-Genshin/2021.7.30.png)
 
 2022.2.9  第二页
+
+![2022.2.9](/images/posts/about-Genshin/2022.2.9.png)
 
 <!-- more -->
 

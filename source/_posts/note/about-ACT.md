@@ -1,14 +1,14 @@
 ---
-title: about-ACT
+title: 动作的艺术-ACT
 date: 2022-02-22 20:26:54
 tags:
 	游戏设计
 categories:
 	笔记
 top_img:
-	/images/posts/about-ACT/head.png
+	/images/posts/about-ACT/head.jpg
 cover:
-	/images/posts/about-ACT/head.png
+	/images/posts/about-ACT/head.jpg
 ---
 
 # 前言

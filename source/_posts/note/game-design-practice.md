@@ -28,20 +28,28 @@ sticky:
 
 # 索引
 
-暴击背后的分析与理解
+游戏中关于暴击背后的分析与理解
 [关于暴击](https://blockedbyrain.github.io/2021/12/01/note/about-critical-hit/)
 
-展示你的Demo需要注意的点以及一些技巧
-[如何展示你的游戏Demo](https://blockedbyrain.github.io/2021/12/15/note/show-your-game/)
-
-蒸蒸日上！
+万字长文带你蒸蒸日上！
 [三国杀的个人理解](https://blockedbyrain.github.io/2022/01/25/note/about-sanguosha/)
 
 五分钟让你了解策划是干嘛的
 [策划职能解析](https://blockedbyrain.github.io/2022/01/30/note/designer-responsibilities/)
 
+展示你的Demo需要注意的点以及一些技巧~~根本没有demo~~
+[如何展示你的游戏Demo](https://blockedbyrain.github.io/2021/12/15/note/show-your-game/)
+
 原神的伤害计算及一些浅薄思考
 [原神的伤害计算](https://blockedbyrain.github.io/2022/02/11/note/Genshin-damage/)
+
+我只是知识的搬运工
+
+[动作的艺术-ACT](https://blockedbyrain.github.io/2022/02/22/note/about-ACT/)
+
+转载：设计师心法
+
+[游玩一切：伟大设计的第一步](https://blockedbyrain.github.io/2022/02/11/note/first-step-to-great-design/)
 
 
 ---

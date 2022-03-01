@@ -1,5 +1,5 @@
 ---
-title: combat-work-notes
+title: 有关战斗的工作笔记
 date: 2022-03-01 17:19:25
 tags:
 	游戏设计

@@ -215,6 +215,8 @@ ACT以高频而爽快的战斗而闻名，而其爽点所在则是需要细细�
 
 [子弹时间](https://baike.baidu.com/item/%E5%AD%90%E5%BC%B9%E6%97%B6%E9%97%B4/2966162)
 
+[ACT 战斗系统中的玩家心理分析](https://indienova.com/indie-game-development/player-psychology-analysis-in-action-combat/)
+
 
 
 <!-- more -->

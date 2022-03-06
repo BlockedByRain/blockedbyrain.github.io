@@ -5,7 +5,6 @@ tags:
 	游戏设计
 categories:
 	笔记
-	战斗
 top_img:
 	
 cover:

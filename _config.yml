@@ -108,4 +108,4 @@ deploy:
   message: Update Hexo Static Content # 你可以自定义此次部署更新的说明
 
 live2d:
-  enable: true
+  enable: false

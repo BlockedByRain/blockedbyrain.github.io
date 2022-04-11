@@ -6,9 +6,9 @@ tags:
 categories:
 	笔记
 top_img:
-	/images/posts/first-step-to-great-design/play-all-the-things.jpg
+	/images/posts/note/first-step-to-great-design/play-all-the-things.jpg
 cover:
-	/images/posts/first-step-to-great-design/play-all-the-things.jpg
+	/images/posts/note/first-step-to-great-design/play-all-the-things.jpg
 ---
 
 # 游玩一切：伟大设计的第一步

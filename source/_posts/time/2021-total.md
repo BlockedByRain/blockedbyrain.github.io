@@ -7,9 +7,9 @@ tags:
 categories:
 	时光
 top_img:
-    /images/posts/2021-total/top.jpg
+    /images/posts/time/2021-total/top.jpg
 cover:
-    /images/posts/2021-total/top.jpg
+    /images/posts/time/2021-total/top.jpg
 
 ---
 
@@ -21,11 +21,11 @@ cover:
 
 这一年过的似乎很快，好像一转眼就过完了，不过令人唏嘘的是去年跨年我在哪在干什么我都忘了，可能也没有什么值得记忆的事情吧。写到这里脑子里却突然冒出来了19年跨年的场景：出去和室友玩了一个下午，带着新开的奶茶店一杯柠檬茶会操宿舍洗澡看阿b的跨年五月天。哈，人的记忆就是这样，一些你没有刻意去记住的东西往往会总以一种奇怪的方式在你意想不到的时候冒出来，而有一些你想记住的事情往往用力回忆你也无法回想起来。在考试的时候这种感觉尤为明显。
 
-![20191231](/images/posts/2021-total/20191231.jpg)
+![20191231](/images/posts/time/2021-total/20191231.jpg)
 
 像盘算一下今年都干了些什么，突然发现也没有什么好说的。大学已经过去一半有多，而我的能力却仍然连一些初高中生都不如。至于博客里的笔记一般都是比较完善才会发出来的，而一些开了坑但是还没有写完的东西仍然躺在文件夹里，等待着我把他们完成的那一天。
 
-![Todo](/images/posts/2021-total/Todo.jpg)
+![Todo](/images/posts/time/2021-total/Todo.jpg)
 
 都会写完的吧，大概
 
@@ -33,43 +33,43 @@ cover:
 
 由于我这个人是个懒鬼也懒得拍照，直接放些图吧。（我什么时候拍的
 
-![20210324](/images/posts/2021-total/20210324.jpg)
+![20210324](/images/posts/time/2021-total/20210324.jpg)
 
 出宿舍吃饭随手一拍
 
-![20210504](/images/posts/2021-total/20210504.jpg)
+![20210504](/images/posts/time/2021-total/20210504.jpg)
 
 出宿舍吃饭随手一拍*2
 
-![20210601](/images/posts/2021-total/20210601.jpg)
+![20210601](/images/posts/time/2021-total/20210601.jpg)
 
 隐约雷鸣
 
-![20210712](/images/posts/2021-total/20210712.jpg)
+![20210712](/images/posts/time/2021-total/20210712.jpg)
 
 考完试出一下门
 
-![20210718](/images/posts/2021-total/20210718.jpg)
+![20210718](/images/posts/time/2021-total/20210718.jpg)
 
 续费米卫兵
 
-![20211004](/images/posts/2021-total/20211004.jpg)
+![20211004](/images/posts/time/2021-total/20211004.jpg)
 
 马老师粉丝见面会
 
-![20211005](/images/posts/2021-total/20211005.jpg)
+![20211005](/images/posts/time/2021-total/20211005.jpg)
 
 年一柄，结果没用多久，寒假玩爆！
 
-![20211027](/images/posts/2021-total/20211027.jpg)
+![20211027](/images/posts/time/2021-total/20211027.jpg)
 
 和好兄弟出门吃个烧烤
 
-![20211229](/images/posts/2021-total/20211229.jpg)
+![20211229](/images/posts/time/2021-total/20211229.jpg)
 
 考完试整个宿舍直接晕过去
 
-![20211231](/images/posts/2021-total/20211231.jpg)
+![20211231](/images/posts/time/2021-total/20211231.jpg)
 
 出门、吃饭、剪头、买个咖啡、宿舍躺平
 

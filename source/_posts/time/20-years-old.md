@@ -6,9 +6,9 @@ tags:
 categories:
     时光
 top_img:
-    /images/posts/20-years-old/hello-twenty.png
+    /images/posts/time/20-years-old/hello-twenty.png
 cover:
-    /images/posts/20-years-old/hello-twenty.png
+    /images/posts/time/20-years-old/hello-twenty.png
 
 ---
 
@@ -16,7 +16,7 @@ cover:
 
 
 
-![hello-twenty](/images/posts/20-years-old/hello-twenty.png)
+![hello-twenty](/images/posts/time/20-years-old/hello-twenty.png)
 
 > 博客的第一张图
 

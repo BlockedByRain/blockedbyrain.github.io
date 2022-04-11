@@ -11,7 +11,7 @@ categories:
 top_img:
     
 cover:
-    /images/posts/about-Genshin/top.png
+    /images/posts/game/about-Genshin/top.png
 ---
 
 # 前言
@@ -24,7 +24,7 @@ cover:
 
 粗略概括，不代表实际情况，主要是给自己当个提示。~~不定时更新~~
 
-![system](/images/posts/about-Genshin/system.png)
+![system](/images/posts/game/about-Genshin/system.png)
 
 ## 伤害机制
 
@@ -76,11 +76,11 @@ cover:
 
 2021.7.30 第一页
 
-![2021.7.30](/images/posts/about-Genshin/2021.7.30.png)
+![2021.7.30](/images/posts/game/about-Genshin/2021.7.30.png)
 
 2022.2.9  第二页
 
-![2022.2.9](/images/posts/about-Genshin/2022.2.9.png)
+![2022.2.9](/images/posts/game/about-Genshin/2022.2.9.png)
 
 <!-- more -->
 

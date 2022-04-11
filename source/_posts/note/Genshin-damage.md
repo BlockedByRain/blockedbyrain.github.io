@@ -6,9 +6,9 @@ tags:
 categories:
 	笔记
 top_img:
-	/images/posts/Genshin-damage/critical.png
+	/images/posts/note/Genshin-damage/critical.png
 cover:
-	/images/posts/Genshin-damage/critical.png
+	/images/posts/note/Genshin-damage/critical.png
 ---
 
 # 前言
@@ -33,7 +33,7 @@ cover:
 
 攻击力可以分为基础攻击力和额外攻击力，面板上显示的其实是总攻击力，计算公式为基础攻击力＋基础攻击力×（1+额外攻击力百分比）+固定额外攻击力。
 
-![attack](/images/posts/Genshin-damage/attack.png)
+![attack](/images/posts/note/Genshin-damage/attack.png)
 
 
 常说的**白字**其实就是指基础攻击力，基础攻击力**只与** *等级和武器攻击力* 有关。其余的所有攻击力来源都视为额外攻击力以**绿字**呈现，其中包括但不限于：圣遗物大小攻击、武器攻击百分比词条、攻击类食物、班尼特大招。
@@ -42,7 +42,7 @@ cover:
 
 直接写在天赋面板上的数字，目前**只与** *技能等级* 相关。不过后续这里涉及到一个**伤害值**的概念，后面会讲到。
 
-![magnification](/images/posts/Genshin-damage/magnification.png)
+![magnification](/images/posts/note/Genshin-damage/magnification.png)
 
 ## 加伤乘区
 
@@ -50,7 +50,7 @@ cover:
 
 需要额外补充的是，敌人身上的易伤和自身的加伤是加算的关系，这也是开服“半部讨龙真君-莫娜”的由来。
 
-![damage-bonus](/images/posts/Genshin-damage/damage-bonus.png)
+![damage-bonus](/images/posts/note/Genshin-damage/damage-bonus.png)
 
 ## 抗性乘区
 
@@ -60,7 +60,7 @@ cover:
 
 > 当减抗幅度超出敌人原有抗性时，超出幅度会变为伤害增幅，该效果与伤害乘区独立且逐渐递减。
 
-![resistance](/images/posts/Genshin-damage/resistance.png)
+![resistance](/images/posts/note/Genshin-damage/resistance.png)
 
 ## 防御乘区
 
@@ -70,7 +70,7 @@ cover:
 
 减防效果比较稀有，一般在命座或天赋中有出现，如雷泽4命、丽莎天赋。
 
-![defense](/images/posts/Genshin-damage/defense.png)
+![defense](/images/posts/note/Genshin-damage/defense.png)
 
 ## 爆伤乘区
 
@@ -78,19 +78,19 @@ cover:
 
 > 面板上的爆伤计算时需要加100%
 
-![critical-damage](/images/posts/Genshin-damage/critical-damage.png)
+![critical-damage](/images/posts/note/Genshin-damage/critical-damage.png)
 
 ## 元素反应乘区
 
 一般指的是元素精通带来的提升，另外还有一些比较少见的提升方式如莫娜2命。
 
-![elemental-reaction](/images/posts/Genshin-damage/elemental-reaction.png)
+![elemental-reaction](/images/posts/note/Genshin-damage/elemental-reaction.png)
 
 ## 独立乘区
 
 另外还有一些独特的乘区独立于以上的计算方式，除了上述所说超过抗性的减抗可以看作是一个独立乘区外，另外比较出名的就是璃月剑仙的四命了。（至于这是不是bug那就只有程序员知道了
 
-![independent](/images/posts/Genshin-damage/independent.png)
+![independent](/images/posts/note/Genshin-damage/independent.png)
 
 # 实测
 
@@ -98,13 +98,13 @@ cover:
 
 ## 测试素材
 
-![Kamisato-Ayaka](/images/posts/Genshin-damage/Kamisato-Ayaka.png)
+![Kamisato-Ayaka](/images/posts/note/Genshin-damage/Kamisato-Ayaka.png)
 
-![talent](/images/posts/Genshin-damage/talent.png)
+![talent](/images/posts/note/Genshin-damage/talent.png)
 
-![skill](/images/posts/Genshin-damage/skill.png)
+![skill](/images/posts/note/Genshin-damage/skill.png)
 
-![enemy](/images/posts/Genshin-damage/enemy.png)
+![enemy](/images/posts/note/Genshin-damage/enemy.png)
 
 ## 数据汇总
 
@@ -136,11 +136,11 @@ cover:
 
 ## 测试结果
 
-![no-critical](/images/posts/Genshin-damage/no-critical.png)
+![no-critical](/images/posts/note/Genshin-damage/no-critical.png)
 
 呃，没有关系，多试几次
 
-![critical](/images/posts/Genshin-damage/critical.png)
+![critical](/images/posts/note/Genshin-damage/critical.png)
 
 **实际伤害**为**19545**
 

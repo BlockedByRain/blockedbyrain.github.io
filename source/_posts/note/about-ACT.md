@@ -6,9 +6,9 @@ tags:
 categories:
 	笔记
 top_img:
-	/images/posts/about-ACT/head.jpg
+	/images/posts/note/about-ACT/head.jpg
 cover:
-	/images/posts/about-ACT/head.jpg
+	/images/posts/note/about-ACT/head.jpg
 ---
 
 # 前言

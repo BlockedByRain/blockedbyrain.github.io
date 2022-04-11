@@ -7,9 +7,9 @@ tags:
 categories:
 	游戏
 top_img:
-	/images/posts/about-sanguosha/top.png
+	/images/posts/game/about-sanguosha/top.png
 cover:
-	/images/posts/about-sanguosha/top.png
+	/images/posts/game/about-sanguosha/top.png
 
 ---
 
@@ -21,7 +21,7 @@ cover:
 
 完稿于2022.1.25 02点26分
 
-![finaltime](/images/posts/about-sanguosha/finaltime.png)
+![finaltime](/images/posts/game/about-sanguosha/finaltime.png)
 
 ~~摸了好久~~
 
@@ -49,7 +49,7 @@ cover:
 
 > 常备主：指一定会出现在主公的武将选择框里的武将，共八位
 >
-> ![常备主](/images/posts/about-sanguosha/%E5%B8%B8%E5%A4%87%E4%B8%BB.png)
+> ![常备主](/images/posts/game/about-sanguosha/%E5%B8%B8%E5%A4%87%E4%B8%BB.png)
 
 从这个角度出发，主公的选将就有两种思路：
 
@@ -291,7 +291,7 @@ cover:
 
 话也不多说了，直接上干货。
 
-![牌堆构成](/images/posts/about-sanguosha/牌堆构成.png)
+![牌堆构成](/images/posts/game/about-sanguosha/牌堆构成.png)
 
 > **EX牌：**在三国杀中共有4张EX卡牌，在《三国杀—标准版》中，这4张游戏牌是和原本104张游戏牌（即两副扑克）是分开摆放的。这4张牌分别黑桃2的寒冰剑，梅花2的仁王盾，方块Q的无懈可击与红桃Q的闪电。
 
@@ -327,11 +327,11 @@ cover:
 
 ### 杀
 
-![杀](/images/posts/about-sanguosha/%E6%9D%80.png)
+![杀](/images/posts/game/about-sanguosha/%E6%9D%80.png)
 
-![火杀](/images/posts/about-sanguosha/%E7%81%AB%E6%9D%80.png)
+![火杀](/images/posts/game/about-sanguosha/%E7%81%AB%E6%9D%80.png)
 
-![雷杀](/images/posts/about-sanguosha/%E9%9B%B7%E6%9D%80.png)
+![雷杀](/images/posts/game/about-sanguosha/%E9%9B%B7%E6%9D%80.png)
 
 最简单最朴素的造成伤害的方式，相信很多玩家都有过祈祷对面这回合断杀的情况，虽然杀在牌堆中的比例是最大的，但是每天断杀的马氏武将仍然数不胜数，所以在没有生存压力的时候可以留杀不留闪，而且说不定对面看到你扔闪就不打你了呢？另外杀是可以作为防御牌来使用的，指应对南蛮决斗，在你具有一定的抗杀能力的时候也可以为了防御扔闪，比如带着八卦的时候。
 
@@ -339,11 +339,13 @@ cover:
 
 ### 闪
 
-![闪](/images/posts/about-sanguosha//%E9%97%AA.png)
+![闪](/images/posts/game/about-sanguosha//%E9%97%AA.png)
 
 杀闪是相对的两张牌，理解了如何使用杀当然你就能更好的使用闪。特别需要记住的是在有藤甲的时候闪酒桃留闪。另外参照上述牌堆可知牌堆中的闪是少于杀的，即同等情况下断闪的概率是大于断杀的，对爆的时候除非面对特定武将否则无需留杀。
 
-### 桃![桃](/images/posts/about-sanguosha//%E6%A1%83.png)
+### 桃
+
+![桃](/images/posts/game/about-sanguosha//%E6%A1%83.png)
 
 
 
@@ -387,7 +389,7 @@ cover:
 
 ### 酒
 
-![酒](/images/posts/about-sanguosha//%E9%85%92.png)
+![酒](/images/posts/game/about-sanguosha//%E9%85%92.png)
 
 俗话说君子坦荡荡，小人防酒杀。在对面有多刀能力的时候最好等到没血了再开始出闪，当然别人也会最后一张杀在出酒杀。
 
@@ -397,25 +399,25 @@ cover:
 
 ### 决斗
 
-![决斗](/images/posts/about-sanguosha//%E5%86%B3%E6%96%97.png)
+![决斗](/images/posts/game/about-sanguosha//%E5%86%B3%E6%96%97.png)
 
 像决斗用完AK的人这种常识相信一般人都知道，但是决斗对于某些买血将来说有时候甚至可以打队友来获得更多的收益。如国战李典决斗队友。一个很高端的操作是送神司马连破，当初在百坑看到惊为天人。
 
 ### 过河拆桥
 
-![过河拆桥](/images/posts/about-sanguosha//%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5.png)
+![过河拆桥](/images/posts/game/about-sanguosha//%E8%BF%87%E6%B2%B3%E6%8B%86%E6%A1%A5.png)
 
 无太多技巧，在不能造成击杀时优先拆装备。对场上明牌需要有一定记忆，如敌人求桃位置。
 
 ### 顺手牵羊
 
-![顺手牵羊](/images/posts/about-sanguosha//%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A.png)
+![顺手牵羊](/images/posts/game/about-sanguosha//%E9%A1%BA%E6%89%8B%E7%89%B5%E7%BE%8A.png)
 
 同拆，在有拆顺时遵循先拆后顺原则，目的是骗出无懈。
 
 ### 万箭齐发
 
-![万箭齐发](/images/posts/about-sanguosha//%E4%B8%87%E7%AE%AD%E9%BD%90%E5%8F%91.png)
+![万箭齐发](/images/posts/game/about-sanguosha//%E4%B8%87%E7%AE%AD%E9%BD%90%E5%8F%91.png)
 
 群攻型锦囊，可以简单认为对其他所有人使用一张杀，但是无法触发有关杀的技能，这里就体现袁绍的强度了。
 
@@ -433,7 +435,7 @@ cover:
 
 ### 南蛮入侵
 
-![南蛮入侵](/images/posts/about-sanguosha//%E5%8D%97%E8%9B%AE%E5%85%A5%E4%BE%B5.png)
+![南蛮入侵](/images/posts/game/about-sanguosha//%E5%8D%97%E8%9B%AE%E5%85%A5%E4%BE%B5.png)
 
 俗称A，即AOE的意思。
 
@@ -457,13 +459,13 @@ cover:
 
 ### 无中生有
 
-![无中生有](/images/posts/about-sanguosha//%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89.png)
+![无中生有](/images/posts/game/about-sanguosha//%E6%97%A0%E4%B8%AD%E7%94%9F%E6%9C%89.png)
 
 主要是和无懈的博弈，有时候可以用无中来骗出无懈然后使用锦囊，场上没有无懈的情况一般可以先开，技能和手牌数有关的武将需要额外考虑。
 
 ### 桃园结义
 
-![桃园结义](/images/posts/about-sanguosha//%E6%A1%83%E5%9B%AD%E7%BB%93%E4%B9%89.png)
+![桃园结义](/images/posts/game/about-sanguosha//%E6%A1%83%E5%9B%AD%E7%BB%93%E4%B9%89.png)
 
 在集火的情况下，先杀掉目标再用，如果杀不了，那就不用。
 
@@ -473,7 +475,7 @@ cover:
 
 ### 借刀杀人
 
-![借刀杀人](/images/posts/about-sanguosha//%E5%80%9F%E5%88%80%E6%9D%80%E4%BA%BA.png)
+![借刀杀人](/images/posts/game/about-sanguosha//%E5%80%9F%E5%88%80%E6%9D%80%E4%BA%BA.png)
 
 一种用法是借队友的刀，杀集火目标，多形成一次伤害输出，不过最好先判断出队友是否有杀，以免平白卸了队友武器。如对关羽、赵云这类不缺杀的队友用，则安全很多。
 
@@ -487,31 +489,31 @@ cover:
 
 ### 无懈可击
 
-![无懈可击](/images/posts/about-sanguosha//%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB.png)
+![无懈可击](/images/posts/game/about-sanguosha//%E6%97%A0%E6%87%88%E5%8F%AF%E5%87%BB.png)
 
 牌局博弈的核心，无论是优势还是劣势都应该珍惜的锦囊，无懈是否用的好往往直接决定胜局。如解关键的乐，保酒桃，控距离等。优势的时候用于防止翻盘点，劣势用于打开局面。
 
 ### 乐不思蜀
 
-![乐不思蜀](/images/posts/about-sanguosha//%E4%B9%90%E4%B8%8D%E6%80%9D%E8%9C%80.png)
+![乐不思蜀](/images/posts/game/about-sanguosha//%E4%B9%90%E4%B8%8D%E6%80%9D%E8%9C%80.png)
 
 标准的控制锦囊，反制回合内爆发型武将的利器，通过打断敌人的联动来打开突破口。使用上优先针对对方血量最少或牌最多的人。
 
 ### 闪电
 
-![闪电](/images/posts/about-sanguosha//%E9%97%AA%E7%94%B5.png)
+![闪电](/images/posts/game/about-sanguosha//%E9%97%AA%E7%94%B5.png)
 
 游戏加速器，在没有人为影响的局面可以让每一个玩家都感到紧张。也是常见的翻盘神器，设计上的目的是增加一定的随机性减少一边倒的局势。而当有改判系或观星系存在时，场上的闪电往往会成为敌人的第一拆顺目标，三点伤害基本上没几个人受的住。
 
 ### 兵粮寸断
 
-![兵粮寸断](/images/posts/about-sanguosha//%E5%85%B5%E7%B2%AE%E5%AF%B8%E6%96%AD.png)
+![兵粮寸断](/images/posts/game/about-sanguosha//%E5%85%B5%E7%B2%AE%E5%AF%B8%E6%96%AD.png)
 
 控制锦囊，跳过摸牌阶段，思路与乐大致相同。
 
 ### 火攻
 
-![v2-431575ee19c4ab4d973ce21b2c333e51_720w](/images/posts/about-sanguosha//v2-431575ee19c4ab4d973ce21b2c333e51_720w.jpg)
+![火攻](/images/posts/game/about-sanguosha/火攻.jpg)
 
 火攻的作用主要就两个：
 
@@ -561,13 +563,13 @@ cover:
 
 #### 雌雄双股剑
 
-![雌雄双股剑](/images/posts/about-sanguosha//%E9%9B%8C%E9%9B%84%E5%8F%8C%E8%82%A1%E5%89%91.png)
+![雌雄双股剑](/images/posts/game/about-sanguosha//%E9%9B%8C%E9%9B%84%E5%8F%8C%E8%82%A1%E5%89%91.png)
 
 不要为了贪一收益而去杀没有意义的目标。
 
 #### 青釭剑
 
-![青釭剑](/images/posts/about-sanguosha//%E9%9D%92%E9%87%AD%E5%89%91.png)
+![青釭剑](/images/posts/game/about-sanguosha//%E9%9D%92%E9%87%AD%E5%89%91.png)
 
 注意：青釭剑的效果为**锁定技**，和队友配合时需要注意。
 
@@ -591,35 +593,35 @@ cover:
 
 #### 麒麟弓
 
-![麒麟弓](/images/posts/about-sanguosha//%E9%BA%92%E9%BA%9F%E5%BC%93.png)
+![麒麟弓](/images/posts/game/about-sanguosha//%E9%BA%92%E9%BA%9F%E5%BC%93.png)
 
 #### 寒冰剑
 
-![寒冰剑](/images/posts/about-sanguosha//%E5%AF%92%E5%86%B0%E5%89%91.png)
+![寒冰剑](/images/posts/game/about-sanguosha//%E5%AF%92%E5%86%B0%E5%89%91.png)
 
 过牌系武将打败不动白的重要手段，养猪必备道具。一个把寒冰藏起来的钟会是当年单挑的神。实际对局中一般是作为下装备使用，下手牌的收益并不如装备来得大。
 
 #### 古锭刀
 
-![古锭刀](/images/posts/about-sanguosha//%E5%8F%A4%E9%94%AD%E5%88%80.png)
+![古锭刀](/images/posts/game/about-sanguosha//%E5%8F%A4%E9%94%AD%E5%88%80.png)
 
 俗称菊花刀，拆迁队神器，常用于铁索起爆点。
 
 #### 吴六剑
 
-![吴六剑](/images/posts/about-sanguosha//%E5%90%B4%E5%85%AD%E5%89%91.png)
+![吴六剑](/images/posts/game/about-sanguosha//%E5%90%B4%E5%85%AD%E5%89%91.png)
 
 一张看似影响很小的武器牌，实际上在国战里有着很重要的意义。国战模式最多可容纳八个人进行游戏，这使在游戏人数众多时，距离成了很关键的因素。有时给队友增加1点攻击范围，就能增加队友能攻击到的目标，更方便集火。
 
 #### 三尖两刃刀
 
-![三尖两刃刀](/images/posts/about-sanguosha//%E4%B8%89%E5%B0%96%E4%B8%A4%E5%88%83%E5%88%80.png)
+![三尖两刃刀](/images/posts/game/about-sanguosha//%E4%B8%89%E5%B0%96%E4%B8%A4%E5%88%83%E5%88%80.png)
 
 国战专属，个人比较喜欢的一把武器，此武器收益较高，用一张牌即可换取1点体力的收益，虽然有距离限制，但一石二鸟的效果还是很可观的。配合铁索可以打出足以影响局势的伤害。特定时候可以和队友进行配合进行强命（魏国人狂喜）。
 
 #### 朱雀羽扇
 
-![朱雀羽扇](/images/posts/about-sanguosha//%E6%9C%B1%E9%9B%80%E7%BE%BD%E6%89%87.png)
+![朱雀羽扇](/images/posts/game/about-sanguosha//%E6%9C%B1%E9%9B%80%E7%BE%BD%E6%89%87.png)
 
 用于制衡藤甲的存在，藤甲具有防具中最强的防御广度，而扇子的存在一定程度上削弱了藤甲强度。否则凭借牌堆中属性杀的密度以及顺拆等下防具的牌，藤甲是很难打的穿的。
 
@@ -627,7 +629,7 @@ cover:
 
 #### 诸葛连弩
 
-![诸葛连弩](/images/posts/about-sanguosha//%E8%AF%B8%E8%91%9B%E8%BF%9E%E5%BC%A9.png)
+![诸葛连弩](/images/posts/game/about-sanguosha//%E8%AF%B8%E8%91%9B%E8%BF%9E%E5%BC%A9.png)
 
 放在武器部分最后的原因相信大家都懂，虽然连弩作为最强大但是最短的武器，常常会被+1卡住，但是这不能掩盖它的强大。
 
@@ -649,13 +651,13 @@ cover:
 
 #### 白银狮子
 
-![白银狮子](/images/posts/about-sanguosha//%E7%99%BD%E9%93%B6%E7%8B%AE%E5%AD%90.png)
+![白银狮子](/images/posts/game/about-sanguosha//%E7%99%BD%E9%93%B6%E7%8B%AE%E5%AD%90.png)
 
 杂技人狂喜，通过顶掉置入弃牌堆的方式反复利用可以达到多次回血的效果，步骘神器。常见用法有贯石斧威慑。
 
 #### 藤甲
 
-  ![藤甲](/images/posts/about-sanguosha//%E8%97%A4%E7%94%B2.png)
+  ![藤甲](/images/posts/game/about-sanguosha//%E8%97%A4%E7%94%B2.png)
 
 极强的防御能力，当场上没有强命系武将的时候基本可以无脑穿，当然还是要留闪的。如果是卖血系的武将还是不要轻易带上，除非你有把握下掉它，不然无论是队友刷你还是敌人开A你都无法给予队友帮助。
 
@@ -675,7 +677,7 @@ cover:
 
 #### 仁王盾
 
-![仁王盾](/images/posts/about-sanguosha//%E4%BB%81%E7%8E%8B%E7%9B%BE.png)
+![仁王盾](/images/posts/game/about-sanguosha//%E4%BB%81%E7%8E%8B%E7%9B%BE.png)
 
 ##### 克制方法
 
@@ -695,7 +697,7 @@ cover:
 
 #### 八卦阵
 
-![八卦阵](/images/posts/about-sanguosha//%E5%85%AB%E5%8D%A6%E9%98%B5.png)
+![八卦阵](/images/posts/game/about-sanguosha//%E5%85%AB%E5%8D%A6%E9%98%B5.png)
 
 古早年代曾说不要打带八卦的郭嘉，因为无论判定成功与否你都是亏的。在那个年代郭嘉除了延时锦囊也就只有八卦可以触发天妒了，而郭嘉本身来说这更像是一个添头技能，有时候郭嘉与其自己穿上更想着给队伍的核心送过去。
 
@@ -831,7 +833,7 @@ cover:
 
 ### 曹丕
 
-![曹丕](/images/posts/about-sanguosha//%E6%9B%B9%E4%B8%95.jpg)
+![曹丕](/images/posts/game/about-sanguosha//%E6%9B%B9%E4%B8%95.jpg)
 
 首先先说一下我个人身份最喜欢的主公吧，基本上我都是直接选的。
 

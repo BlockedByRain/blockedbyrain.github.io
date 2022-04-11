@@ -6,9 +6,9 @@ tags:
 categories:
     笔记
 top_img:
-    /images/posts/designer-responsibilities/策划视角.png
+    /images/posts/note/designer-responsibilities/策划视角.png
 cover:
-    /images/posts/designer-responsibilities/策划视角.png
+    /images/posts/note/designer-responsibilities/策划视角.png
 
 ---
 
@@ -82,7 +82,7 @@ cover:
 
 以任务系统为例
 
-![系统-思维导图](/images/posts/designer-responsibilities/系统-思维导图.png)
+![系统-思维导图](/images/posts/note/designer-responsibilities/系统-思维导图.png)
 
 ### 设计文档
 
@@ -132,7 +132,7 @@ cover:
 
 其实对于一个系统策划来说，重点不在于好想法、好创意、好灵感，更重要是的流程管理、游戏认知、开发进度掌控。
 
-![游族系统](/images/posts/designer-responsibilities/游族系统.png)
+![游族系统](/images/posts/note/designer-responsibilities/游族系统.png)
 
 游族系统校招
 
@@ -164,7 +164,7 @@ cover:
 
 引用《游戏机制:高级游戏设计技术》
 
-![游戏机制](/images/posts/designer-responsibilities/游戏机制.png)
+![游戏机制](/images/posts/note/designer-responsibilities/游戏机制.png)
 
 ### 要求
 
@@ -222,13 +222,13 @@ cover:
 
 一个最近比较多的点：结合剧情设计关卡或地图。
 
-![蛮啾关卡](/images/posts/designer-responsibilities/蛮啾关卡.png)
+![蛮啾关卡](/images/posts/note/designer-responsibilities/蛮啾关卡.png)
 
 蛮啾关卡
 
 附上一张某厂的关卡笔试要求（未实际考证
 
-![某厂笔试](/images/posts/designer-responsibilities/某厂笔试.png)
+![某厂笔试](/images/posts/note/designer-responsibilities/某厂笔试.png)
 
 # 文案策划
 
@@ -285,7 +285,7 @@ cover:
 
 不少游戏其实对于文案策划的需求并不强、甚至没有这个职位，该部分职责由其他策划兼任，而大公司或者对文案要求高的项目对其要求极其苛刻，也就是非常卷，有时需要对某一领域有深刻理解，如武侠mmo，金庸起码要看完吧；古装玄幻，古代礼仪举止、古诗词、甚至修仙网文都有所要求。
 
-![雷火文案](/images/posts/designer-responsibilities/雷火文案.png)
+![雷火文案](/images/posts/note/designer-responsibilities/雷火文案.png)
 
 雷火文案
 
@@ -415,11 +415,11 @@ UI的变化、视角的移动
 >
 > 答：角色肢体动作、特效、音效、物理模拟；四点展开
 
-![米哈游战斗-JRPG](/images/posts/designer-responsibilities/米哈游战斗-JRPG.png)
+![米哈游战斗-JRPG](/images/posts/note/designer-responsibilities/米哈游战斗-JRPG.png)
 
 米哈游战斗-JRPG
 
-![米哈游战斗-ARPG&ACT](/images/posts/designer-responsibilities/米哈游战斗-ARPG&ACT.png)
+![米哈游战斗-ARPG&ACT](/images/posts/note/designer-responsibilities/米哈游战斗-ARPG&ACT.png)
 
 米哈游战斗-ARPG&ACT
 
@@ -505,7 +505,7 @@ vba
 
 资源折算、氪金预期
 
-![库洛数值](/images/posts/designer-responsibilities/库洛数值.png)
+![库洛数值](/images/posts/note/designer-responsibilities/库洛数值.png)
 
 库洛数值
 
@@ -532,7 +532,7 @@ vba
 
 ## EX
 
-![鹰角技策jd](/images/posts/designer-responsibilities/鹰角技策.png)
+![鹰角技策jd](/images/posts/note/designer-responsibilities/鹰角技策.png)
 
 这里以鹰角的技策jd为例
 
@@ -548,17 +548,17 @@ vba
 
 策划视角：
 
-![策划视角](/images/posts/designer-responsibilities/策划视角.png)
+![策划视角](/images/posts/note/designer-responsibilities/策划视角.png)
 
 玩家视角：
 
-![玩家视角](/images/posts/designer-responsibilities/玩家视角.png)
+![玩家视角](/images/posts/note/designer-responsibilities/玩家视角.png)
 
 对于以上这么多的职位，个人还是偏向**战斗**一点，毕竟其职责是游戏核心中的核心，感觉其工作内容会给我个人带来很大的成就感，另外职业前景我也比较看好。
 
 当然战斗策划的要求我现在也并没有把握都能够得到，而现在距离春招的时间已经不多了，是时候开卷了！
 
-![time](/images/posts/designer-responsibilities/time.png)
+![time](/images/posts/note/designer-responsibilities/time.png)
 
 ~~摸了好久~~
 

@@ -14,7 +14,7 @@ icon: icon-home-4-line
 
 ### 2021.10.24
 
-将主题更换为 [Butterfly](https://butterfly.js.org)
+将主题由 [yun](https://yun.yunyoujun.cn/) 至 [butterfly](https://butterfly.js.org/)
 
 ## 2021.8
 
@@ -38,11 +38,11 @@ icon: icon-home-4-line
 
 本地部署成功并同步至GitHub，可在线访问
 
-### 2021.10.24
+# 我与十年之约
 
-更换主题
+第一次正式了解是在21年的暑假 天天看虫洞 后来22年1月点进活动主页看到最近里有一个网友 感慨世界奇妙 详情见当时扣扣动态
 
-由 [yun](https://yun.yunyoujun.cn/) 至 [butterfly](https://butterfly.js.org/)
+之后可能会尝试申请，但是域名之前申请失败了，再议
 
 
 

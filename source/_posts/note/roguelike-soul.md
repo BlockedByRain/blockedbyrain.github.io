@@ -110,7 +110,7 @@ Roguelike游戏通常会通过随机生成的关卡避免玩家背板，让每�
 
 利用限制对玩家的资源进行把控，使得玩家毕需对资源做出取舍，进而影响玩家的通关难度。
 
-![resource flow](/images/posts/note/Genshin-damage/resource flow.png)
+![resource flow](/images/posts/note/roguelike-soul/resource flow.png)
 
 如图是 以撒 和 Hades 的资源流向
 

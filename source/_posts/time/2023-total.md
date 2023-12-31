@@ -68,9 +68,73 @@ cover:
 
 补点照片啥的~~一定不会鸽的~~
 
+现在是2023年12月31日20点36分，补一下照片，简单从手机找找，多的也没有
 
 
 
+开始面试，道上路牌
+
+![宇宙中心科韵路！](/images/posts/time/2023-total/20230201.jpg)
+
+再次面试，小游戏，主策都不在
+
+![这里是？](/images/posts/time/2023-total/20230203.jpg)
+
+三年之约，怎么又是和男的看？
+
+![这里是？](/images/posts/time/2023-total/20230325.jpg)
+
+团建蹭老大的票，没看过本集，感官还可以
+
+![这里是？](/images/posts/time/2023-total/20230421.jpg)
+
+卧槽，二次元
+
+![味道太大](/images/posts/time/2023-total/20230527.jpg)
+
+主线任务已完成
+
+![不堪回首作品](/images/posts/time/2023-total/20230607.jpg)
+
+网吧团建之一通乱杀
+
+![乱杀](/images/posts/time/2023-total/20230609.jpg)
+
+离开，是最后的你好
+
+![乱杀](/images/posts/time/2023-total/202306191.jpg)
+
+两年的宝藏校旁小店，和下铺最后来一次，下一站，嘉禾望岗
+
+![呜呜](/images/posts/time/2023-total/202306192.jpg)
+
+跑到深圳过生日
+
+![我不会玩阿](/images/posts/time/2023-total/20230819.jpg)
+
+网吧团建新项目，完全不会打枪
+
+![这里是？](/images/posts/time/2023-total/20230825.jpg)
+
+中秋和老大吃饭，然后麻将加网吧，回来钥匙掉了
+
+![我钥匙呢](/images/posts/time/2023-total/20230929.jpg)
+
+什么游戏？
+
+![你说得对](/images/posts/time/2023-total/20231204.jpg)
+
+好红
+
+![屁股坏了](/images/posts/time/2023-total/20231209.jpg)
+
+彻底疯狂！
+
+![买折扣卷](/images/posts/time/2023-total/20231214.jpg)
+
+
+
+20点50分，收尾准备上传。虽说基本不可能有人能看到，但是还是预祝新的一年一切顺利，心想事成，俺也一样！
 
 <!-- more -->
 

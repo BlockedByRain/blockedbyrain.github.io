@@ -6,9 +6,9 @@ tags:
 categories:
     时光
 top_img:
-    /images/posts/time/20-years-old/hello-twenty.png
+    /images/topimg/0.jpg
 cover:
-    /images/posts/time/20-years-old/hello-twenty.png
+    /images/topimg/0.jpg
 ---
 
 

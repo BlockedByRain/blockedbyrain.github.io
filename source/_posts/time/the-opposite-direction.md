@@ -7,9 +7,9 @@ tags:
 categories:
 	时光
 top_img:
-    /images/posts/time/2021-total/top.jpg
+    /images/topimg/0.jpg
 cover:
-    /images/posts/time/2021-total/top.jpg
+    /images/topimg/0.jpg
 ---
 
 > 对于高中生活，很多人都会有自己不同的理解和感受。对我而言，亦是如此。

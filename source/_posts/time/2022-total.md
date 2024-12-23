@@ -7,9 +7,9 @@ tags:
 categories:
 	时光
 top_img:
-    /images/posts/time/2021-total/top.jpg
+    
 cover:
-    /images/posts/time/2021-total/top.jpg
+    
 ---
 
 现在是

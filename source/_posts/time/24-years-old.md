@@ -6,9 +6,9 @@ tags:
 categories:
     时光
 top_img:
-	/images/topimg//images/posts/time/2024-total/Y2025.jpg
+	/images/topimg/images/posts/time/2024-total/Y2025.jpg
 cover:
-	/images/topimg//images/posts/time/2024-total/Y2025.jpg
+	/images/topimg/images/posts/time/2024-total/Y2025.jpg
 ---
 
 

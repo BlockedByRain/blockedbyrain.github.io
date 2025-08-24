@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>有关战斗的工作笔记 | 尼伯龙根</title><meta name="keywords" content="游戏设计"><meta name="author" content="BlockedByRain"><meta name="copyright" content="BlockedByRain"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言最近项目已经来到中后期阶段，准备进行地图布怪和数值的设计，由于这方面的东西没有接触过，所以专门开一篇来记录自己的学习心得和实践，持续更新到通过组长审查吧。 初版布怪当前布置资源有：近战小怪一种A、远程小怪一种B、近战精英怪一种C、BOSS一种D。 根据我们内部的讨论结果初步决定将怪物波数设定为5波。其考虑如下 1.该关卡为玩家第一个遇到怪物的关卡，故波数需要设定在一个有一定强度让玩家快速进入游">
+<meta property="og:type" content="article">
+<meta property="og:title" content="有关战斗的工作笔记">
+<meta property="og:url" content="https://blockedbyrain.github.io/2022/03/01/note/combat-work-notes/index.html">
+<meta property="og:site_name" content="尼伯龙根">
+<meta property="og:description" content="前言最近项目已经来到中后期阶段，准备进行地图布怪和数值的设计，由于这方面的东西没有接触过，所以专门开一篇来记录自己的学习心得和实践，持续更新到通过组长审查吧。 初版布怪当前布置资源有：近战小怪一种A、远程小怪一种B、近战精英怪一种C、BOSS一种D。 根据我们内部的讨论结果初步决定将怪物波数设定为5波。其考虑如下 1.该关卡为玩家第一个遇到怪物的关卡，故波数需要设定在一个有一定强度让玩家快速进入游">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blockedbyrain.github.io/images/topimg/1.jpg">
+<meta property="article:published_time" content="2022-03-01T09:19:25.000Z">
+<meta property="article:modified_time" content="2025-08-24T09:39:06.544Z">
+<meta property="article:author" content="BlockedByRain">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blockedbyrain.github.io/images/topimg/1.jpg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blockedbyrain.github.io/2022/03/01/note/combat-work-notes/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '有关战斗的工作笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 17:39:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/topimg/1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">尼伯龙根</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">有关战斗的工作笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-01T09:19:25.000Z" title="发表于 2022-03-01 17:19:25">2022-03-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T09:39:06.544Z" title="更新于 2025-08-24 17:39:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="有关战斗的工作笔记"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近项目已经来到中后期阶段，准备进行地图布怪和数值的设计，由于这方面的东西没有接触过，所以专门开一篇来记录自己的学习心得和实践，持续更新到通过组长审查吧。</p>
+<h1 id="初版"><a href="#初版" class="headerlink" title="初版"></a>初版</h1><h2 id="布怪"><a href="#布怪" class="headerlink" title="布怪"></a>布怪</h2><p>当前布置资源有：<strong>近战小怪一种A、远程小怪一种B、近战精英怪一种C、BOSS一种D</strong>。</p>
+<p>根据我们内部的讨论结果初步决定将<strong>怪物波数设定为5波</strong>。其考虑如下</p>
+<p>1.该关卡为玩家第一个遇到怪物的关卡，故波数需要设定在一个有一定强度让玩家快速进入游戏战斗状态却又不太困难导致玩家打不过去的程度，即<strong>难度控制</strong>。</p>
+<blockquote>
+<p>该游戏目前定位为难度适中，即玩家Build构建未完成时需要一定的操作来通关，而当凑齐Build之后则获得爽快的割草体验。</p>
+</blockquote>
+<p>2.该关卡的另一个目的是让玩家了解怪物，故尽量将不同的怪物分布在不同波次，让玩家对于怪物有一定的了解，当玩家能够很好的处理单种怪物之后再将怪物进行混合，进一步提升难度并让玩家根据自己获得的经验思考应对的策略，即<strong>考验策略</strong>。</p>
+<h2 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h2><p>由于个人并没有做过游戏数值，也没有拆过，所以这一版基本是用脚填的，不排除之后摆烂靠测试反馈来调整的可能。</p>
+<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th>生命值</th>
+<th>攻击力</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">玩家</td>
+<td>100</td>
+<td>15</td>
+</tr>
+<tr>
+<td align="left">A</td>
+<td>60</td>
+<td>3</td>
+</tr>
+<tr>
+<td align="left">B</td>
+<td>40</td>
+<td>5</td>
+</tr>
+<tr>
+<td align="left">C</td>
+<td>100</td>
+<td>15</td>
+</tr>
+<tr>
+<td align="left">D</td>
+<td>200</td>
+<td>20</td>
+</tr>
+</tbody></table>
+<p>虽然使用脚填的，但是这里还是记录一下自己当时的想法：先把玩家的属性确定下来，然后根据怪物的特点进行设计。由于游戏中玩家一套攻击为三段，故设计远程小怪可以被玩家一套普攻击杀，而近战小怪则不能。相对的，远程小怪拥有高于近战小怪的伤害，<strong>从设计上鼓励玩家先击杀远程小怪</strong>。</p>
+<p>至于精英和boss，真的是靠感觉填的，这里也忘了当初自己在想什么了。</p>
+<h2 id="编辑器"><a href="#编辑器" class="headerlink" title="编辑器"></a>编辑器</h2><p>组长哐哐敲了半小时写了个刷怪编辑器，但是刷新波次和刷新等待时间并不能同时配置，只能选一个配置。我在极端愤怒的情况下直接把他的代码给扬了重写一个，现在可以<strong>按照第几波和波次开始等待秒数两个参数来进行配置</strong>了，得好好用上。</p>
+<p>其实应该还可以分成波次中的小波次的，不过可以逻辑上直接当成一个大波次来做，就懒得改了。</p>
+<h1 id="二版"><a href="#二版" class="headerlink" title="二版"></a>二版</h1><h2 id="学习ing"><a href="#学习ing" class="headerlink" title="学习ing"></a>学习ing</h2><p>现在回过头来重新审视这个需求，布怪和数值看上去是关卡以及数值的工作，但是他们归根结底还是跟战斗扯上关系，所以<strong>这其实是战斗策划工作的一部分</strong>。<del>也就是我要做的</del></p>
+<p>而战斗作为一个游戏最核心也是最重要的部分，他直接联系到玩家对于这块游戏的认知和体验。没错，<strong>玩家的体验才是策划的最终目标，一切的一切都是为了给玩家造成某种体验而存在</strong>。</p>
+<p>按着这条路径找下去，很自然的，我找到了这篇文章。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/134164771">游戏战斗数值入门（上）：游戏战斗数值介绍 &amp; 验证型的战斗节奏</a></p>
+<p>关卡中怪物的布置直接影响到玩家的<strong>战斗节奏</strong>，这很符合常识：在敌人种类相同的时候敌人越多给的压力越大。</p>
+<p><del>啧，我们这个项目是肉鸽游戏，各种奇奇怪怪的buff可能会对实际体验造成或大或小的影响，这里直接先不讨论。</del></p>
+<p>读完两篇文章可以得出我之前纯粹按照个人脑洞填的数值竟然还隐约摸到一点门道，可谓瞎猫碰到死耗子了。</p>
+<h2 id="布怪-1"><a href="#布怪-1" class="headerlink" title="布怪"></a>布怪</h2><p>于是我有了新的想法。怪物一共有五波，</p>
+<ol>
+<li>纯近战小怪</li>
+<li>减少近战小怪数量并增加远程小怪</li>
+<li>添加精英怪并添加杂兵骚扰</li>
+<li>出较多杂兵</li>
+<li>boss战，boss有随机召唤三种怪物的能力</li>
+</ol>
+<p>第一波和第二波主要是为了让玩家了解小怪，并通过实际战斗了解到远程小怪的伤害较高、生命较低，应该成为第一攻击对象。</p>
+<p>第三波为该图中的第一个战斗高峰，出现对于两种杂兵来说较强的攻击力和生命值，但是攻速和移速相对较低，让玩家学会先清理杂兵在和该怪物周旋的解决策略，为最后一波Boss战做好学习准备。</p>
+<p>第四波为第三波战斗高峰之后的平缓，主要是为了让玩家集中的精神从刚才的战斗中缓和过来，但却不会让玩家的注意力完全分散。</p>
+<p>第五波为该图Boss战，Boss拥有隔一段时间召唤怪物的能力，玩家需要综合前面对怪物的理解来调整自己的战斗方式，正确将其处理。</p>
+<p>按照预想情况，五波的战斗强度应该为：1、2、4、3、5    （以Boss战强度为5分设为最高</p>
+<h2 id="数值-1"><a href="#数值-1" class="headerlink" title="数值"></a>数值</h2><p>数值直接用上一版的用着先，其他的再说，可能需要单独调整一下个别怪物的移速和攻速。</p>
+<h2 id="怪物设计"><a href="#怪物设计" class="headerlink" title="怪物设计"></a>怪物设计</h2><p>唔，突然想到草稿里有一份关于怪物设计的笔记，不过由于跟这个项目调性不太符合所以先鸽了，有机会放出来吧。</p>
+<p>这里主要是在采用初版设计的时候测试发现了一个问题：玩家攻击的压制力过强，基本上只要碰到了怪物一下，怪物就会被压制至死，没有还手的余地，导致难度和预想的相差甚远。于是想了个<strong>怪物受击保护</strong>的机制：当怪物受到一定次数的玩家攻击后获得一小段时间的霸体，其间不会由于受到攻击而产生硬直。</p>
+<h1 id="三版"><a href="#三版" class="headerlink" title="三版"></a>三版</h1><p>第二版的验收已经差不多了，估计应该是过了。现在有了一个新的问题。</p>
+<p><strong>快节奏的战斗和慢节奏的战斗在体验上有何不同</strong></p>
+<p>我们这个从设计之初的预想是快节奏的小房间战斗（对标Hades</p>
+<p>这个问题雀食值得研究一下子。</p>
+<h1 id="四版"><a href="#四版" class="headerlink" title="四版"></a>四版</h1><p>第一个Boss的AI，由于各种各样的原因到现在还是没有调的很好，当时我也只是做到可以放出两种招式就停了，现在组里多了一个程序，当然要把当初预想但是没实现的设计补全了，清明三天估计都要花在这里了。</p>
+<p>组长现在也在做buff的最终确认，之后就可以开始调数值了，说实话又是一个挑战，赶紧学起来。</p>
+<h1 id="五版"><a href="#五版" class="headerlink" title="五版"></a>五版</h1><p>最近项目又招到一个程序嗨奴<a target="_blank" rel="noopener" href="https://hungryhighness.github.io/">好饿</a>，大佬的效率及其牛掰，大部分的行为树逻辑已经看的过去了，除去一些表现上的问题外获得了制作人的高度评价。</p>
+<p>另外布怪也做了调整，现在这版是布了六波，大体上还是遵循着之前的思路，战斗节奏以及新怪物的适应学习。</p>
+<h1 id="反馈与迭代"><a href="#反馈与迭代" class="headerlink" title="反馈与迭代"></a>反馈与迭代</h1><p>记录一些开发中有趣的细节</p>
+<h2 id="神奇的打击判定"><a href="#神奇的打击判定" class="headerlink" title="神奇的打击判定"></a>神奇的打击判定</h2><p>程序：为什么有时候出现打不到怪的情况？</p>
+<p>程序：我忘记配碰撞框了。</p>
+<h2 id="闪避、普攻与手感"><a href="#闪避、普攻与手感" class="headerlink" title="闪避、普攻与手感"></a>闪避、普攻与手感</h2><p>关于玩家普攻与闪避的一些修改意见</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1 普攻持续时间判定过长，影响手感</span><br><span class="line">2 技能动画可重新调整，前段减慢后段加快，提升打击感</span><br><span class="line">3 技能判定延迟，影响玩家反馈</span><br><span class="line">4 闪避最好设计连续使用次数，限制玩家机动性（挖养成坑</span><br><span class="line">5 另闪避手感有点问题，单方向移动闪避正常，但当同时按下两个方向键使用闪避则无法预知闪避方向，根据实测没有发现特定规律</span><br><span class="line">6 闪避无法打断技能 且 闪避途中释放技能会导致输入丢失</span><br></pre></td></tr></table></figure>
+
+<h2 id="这游戏好简单"><a href="#这游戏好简单" class="headerlink" title="这游戏好简单"></a>这游戏好简单</h2><p>程序：为什么我压制力这么强，怪直接僵直到死？</p>
+<p>我：这又不是bug，游戏特性！要不你加个受击保护，就是收到多少次攻击霸体那种？血量触发也行。</p>
+<p>程序 ：我明天问下这种情况怎么做。</p>
+<p>程序：（第二天）就这样，大家都是这么做的。</p>
+<p>我：很好，快写吧。</p>
+<h2 id="美术反馈"><a href="#美术反馈" class="headerlink" title="美术反馈"></a>美术反馈</h2><p><img src="/images/posts/note/combat-work-notes/art-feedback.png" alt="常备主"></p>
+<p>第五版的反馈，后续还有很多工作要做啊</p>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>战斗作为游戏的核心组成部分（斗地主也有战斗），绝不是一个孤立的工种，关卡和数值永远会伴随着你，它们任何一点小小的改动都可能会让你的战斗体验出现偏差。</p>
+<span id="more"></span>
+
+<hr>
+<p>The story is not over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BlockedByRain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blockedbyrain.github.io/2022/03/01/note/combat-work-notes/">https://blockedbyrain.github.io/2022/03/01/note/combat-work-notes/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blockedbyrain.github.io" target="_blank">尼伯龙根</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></div><div class="post_share"><div class="social-share" data-image="/images/topimg/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/06/note/on-monster-design/"><img class="prev-cover" src="/images/topimg/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">浅谈怪物设计-以漂浮灵为例</div></div></a></div><div class="next-post pull-right"><a href="/2022/02/22/note/about-ACT/"><img class="next-cover" src="/images/posts/note/about-ACT/head.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">动作的艺术-ACT</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2022/02/22/note/about-ACT/" title="动作的艺术-ACT"><img class="cover" src="/images/posts/note/about-ACT/head.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-22</div><div class="title">动作的艺术-ACT</div></div></a></div><div><a href="/2021/12/01/note/about-critical-hit/" title="关于暴击"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-01</div><div class="title">关于暴击</div></div></a></div><div><a href="/2022/02/10/note/first-step-to-great-design/" title="游玩一切：伟大设计的第一步"><img class="cover" src="/images/posts/note/first-step-to-great-design/play-all-the-things.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-11</div><div class="title">游玩一切：伟大设计的第一步</div></div></a></div><div><a href="/2021/12/02/note/game-design-practice/" title="游戏设计修行"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-02</div><div class="title">游戏设计修行</div></div></a></div><div><a href="/2021/12/15/note/show-your-game/" title="如何展示你的游戏Demo"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-15</div><div class="title">如何展示你的游戏Demo</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BlockedByRain</div><div class="author-info__description">或许是不知梦的缘故，流离之人追逐幻影</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BlockedByRain" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1596127831@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">冀以尘雾之微补益山海，荧烛末光增辉日月</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9D%E7%89%88"><span class="toc-number">2.</span> <span class="toc-text">初版</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E6%80%AA"><span class="toc-number">2.1.</span> <span class="toc-text">布怪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC"><span class="toc-number">2.2.</span> <span class="toc-text">数值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E8%BE%91%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text">编辑器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E7%89%88"><span class="toc-number">3.</span> <span class="toc-text">二版</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0ing"><span class="toc-number">3.1.</span> <span class="toc-text">学习ing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%83%E6%80%AA-1"><span class="toc-number">3.2.</span> <span class="toc-text">布怪</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E5%80%BC-1"><span class="toc-number">3.3.</span> <span class="toc-text">数值</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E8%AE%BE%E8%AE%A1"><span class="toc-number">3.4.</span> <span class="toc-text">怪物设计</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E7%89%88"><span class="toc-number">4.</span> <span class="toc-text">三版</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E7%89%88"><span class="toc-number">5.</span> <span class="toc-text">四版</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E7%89%88"><span class="toc-number">6.</span> <span class="toc-text">五版</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%8D%E9%A6%88%E4%B8%8E%E8%BF%AD%E4%BB%A3"><span class="toc-number">7.</span> <span class="toc-text">反馈与迭代</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A5%9E%E5%A5%87%E7%9A%84%E6%89%93%E5%87%BB%E5%88%A4%E5%AE%9A"><span class="toc-number">7.1.</span> <span class="toc-text">神奇的打击判定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AA%E9%81%BF%E3%80%81%E6%99%AE%E6%94%BB%E4%B8%8E%E6%89%8B%E6%84%9F"><span class="toc-number">7.2.</span> <span class="toc-text">闪避、普攻与手感</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E6%B8%B8%E6%88%8F%E5%A5%BD%E7%AE%80%E5%8D%95"><span class="toc-number">7.3.</span> <span class="toc-text">这游戏好简单</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BE%8E%E6%9C%AF%E5%8F%8D%E9%A6%88"><span class="toc-number">7.4.</span> <span class="toc-text">美术反馈</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/time/24-years-old/" title="24-years-old"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="24-years-old"/></a><div class="content"><a class="title" href="/2025/08/19/time/24-years-old/" title="24-years-old">24-years-old</a><time datetime="2025-08-19T16:32:00.000Z" title="发表于 2025-08-20 00:32:00">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/07/time/2025-half/" title="2025-half"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025-half"/></a><div class="content"><a class="title" href="/2025/07/07/time/2025-half/" title="2025-half">2025-half</a><time datetime="2025-07-07T15:04:58.000Z" title="发表于 2025-07-07 23:04:58">2025-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年终自我枪毙"/></a><div class="content"><a class="title" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙">2024年终自我枪毙</a><time datetime="2024-12-23T15:03:30.000Z" title="发表于 2024-12-23 23:03:30">2024-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出山"/></a><div class="content"><a class="title" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山">出山</a><time datetime="2024-11-26T17:19:59.000Z" title="发表于 2024-11-27 01:19:59">2024-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/essay/MyGO/" title="MyGO"><img src="/images/posts/essay/MyGO/image-20240818041546407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyGO"/></a><div class="content"><a class="title" href="/2024/08/18/essay/MyGO/" title="MyGO">MyGO</a><time datetime="2024-08-18T15:42:57.000Z" title="发表于 2024-08-18 23:42:57">2024-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By BlockedByRain</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

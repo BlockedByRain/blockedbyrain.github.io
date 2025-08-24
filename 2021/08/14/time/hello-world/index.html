@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Hello World | 尼伯龙根</title><meta name="keywords" content="建站"><meta name="author" content="BlockedByRain"><meta name="copyright" content="BlockedByRain"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="说明按照惯例这一篇应该是本博客的搭建过程，而我在做的过程中也确实写（抄）了一点小心得，不过做到后面发现有许多问题自己都搞不明白。再加上我本人并非前端出身也不太考虑往这方面深度发展，所以还是不放出来误人子弟了。这里就简单说一下自己遇到的坑。 个人心得SSH密钥如果没有进行密钥的配置在本地完成改动后提交将会导致提交失败，具体过程可以参照末尾的链接 主分支命名hexo框架中的配置文件默认将生成的博客发布">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello World">
+<meta property="og:url" content="https://blockedbyrain.github.io/2021/08/14/time/hello-world/index.html">
+<meta property="og:site_name" content="尼伯龙根">
+<meta property="og:description" content="说明按照惯例这一篇应该是本博客的搭建过程，而我在做的过程中也确实写（抄）了一点小心得，不过做到后面发现有许多问题自己都搞不明白。再加上我本人并非前端出身也不太考虑往这方面深度发展，所以还是不放出来误人子弟了。这里就简单说一下自己遇到的坑。 个人心得SSH密钥如果没有进行密钥的配置在本地完成改动后提交将会导致提交失败，具体过程可以参照末尾的链接 主分支命名hexo框架中的配置文件默认将生成的博客发布">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blockedbyrain.github.io/images/topimg/0.jpg">
+<meta property="article:published_time" content="2021-08-14T10:59:07.000Z">
+<meta property="article:modified_time" content="2025-08-24T09:39:06.545Z">
+<meta property="article:author" content="BlockedByRain">
+<meta property="article:tag" content="建站">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blockedbyrain.github.io/images/topimg/0.jpg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blockedbyrain.github.io/2021/08/14/time/hello-world/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Hello World',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 17:39:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/topimg/0.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">尼伯龙根</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Hello World</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-14T10:59:07.000Z" title="发表于 2021-08-14 18:59:07">2021-08-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T09:39:06.545Z" title="更新于 2025-08-24 17:39:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%97%B6%E5%85%89/">时光</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">428</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>1分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Hello World"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>按照惯例这一篇应该是本博客的搭建过程，而我在做的过程中也确实写（抄）了一点小心得，不过做到后面发现有许多问题自己都搞不明白。再加上我本人并非前端出身也不太考虑往这方面深度发展，所以还是不放出来误人子弟了。<br>这里就简单说一下自己遇到的坑。</p>
+<h2 id="个人心得"><a href="#个人心得" class="headerlink" title="个人心得"></a>个人心得</h2><h3 id="SSH密钥"><a href="#SSH密钥" class="headerlink" title="SSH密钥"></a>SSH密钥</h3><p>如果没有进行密钥的配置在本地完成改动后提交将会导致提交失败，具体过程可以参照末尾的链接</p>
+<h3 id="主分支命名"><a href="#主分支命名" class="headerlink" title="主分支命名"></a>主分支命名</h3><p>hexo框架中的配置文件默认将生成的博客发布在master分支，但是GitHub已经在2020年将其更改为main（具体为什么我也不知道），所以在部署前要记得将其改为main或者在GitHub上该仓库的主分支重新命名为master。</p>
+<h2 id="链接一览"><a href="#链接一览" class="headerlink" title="链接一览"></a>链接一览</h2><h3 id="搭建"><a href="#搭建" class="headerlink" title="搭建"></a>搭建</h3><p><a target="_blank" rel="noopener" href="https://akilar.top/posts/6ef63e2d/">Win10:Hexo+github 搭建个人博客</a>    长达1W字的超细教程，建议直接跳到自己需要的部分</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_37781304/article/details/82729029">hexo史上最全搭建教程</a>    可辅助参考</p>
+<h3 id="重新部署"><a href="#重新部署" class="headerlink" title="重新部署"></a>重新部署</h3><p><a target="_blank" rel="noopener" href="https://immyw.com/posts/dda8c81b/">重裝系統後重新部署恢復 Hexo blog</a></p>
+<h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">Hexo文档</a></p>
+<h3 id="主题文档"><a href="#主题文档" class="headerlink" title="主题文档"></a>主题文档</h3><p><a target="_blank" rel="noopener" href="https://butterfly.js.org/">Butterfly文档</a></p>
+<h3 id="他山之石"><a href="#他山之石" class="headerlink" title="他山之石"></a>他山之石</h3><p>所谓他山之石可以攻玉，直接贴别人的整理吧（其实就是懒）。</p>
+<p><a target="_blank" rel="noopener" href="https://www.bearchild.top/2021/05/28/%E7%BD%91%E7%AB%99%E5%BC%80%E5%8F%91/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/Github+Hexo%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/">Github+Hexo 建站记录</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.drflower.top/posts/5920b38e/">Hexo-Butterfly主题博客搭站记录</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.drflower.top/posts/963961c3/">把Hexo部署到云服务器</a></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>由于技术水平有限，以后可能会慢慢对博客进一步优化，本篇会不定期更新。<br><del>敬请期待</del>。</p>
+<h2 id="最后更新时间："><a href="#最后更新时间：" class="headerlink" title="最后更新时间："></a>最后更新时间：</h2><p>2022年1月18日02点23分</p>
+<p>The story is not over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BlockedByRain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blockedbyrain.github.io/2021/08/14/time/hello-world/">https://blockedbyrain.github.io/2021/08/14/time/hello-world/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blockedbyrain.github.io" target="_blank">尼伯龙根</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%BB%BA%E7%AB%99/">建站</a></div><div class="post_share"><div class="social-share" data-image="/images/topimg/0.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-full"><a href="/2021/08/19/time/20-years-old/"><img class="prev-cover" src="/images/posts/time/20-years-old/hello-twenty.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">二十岁</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/10/24/time/2021-10-24/" title="壹零贰肆"><img class="cover" src="/images/posts/time/2021-10-24/1024.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-10-24</div><div class="title">壹零贰肆</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BlockedByRain</div><div class="author-info__description">或许是不知梦的缘故，流离之人追逐幻影</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BlockedByRain" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1596127831@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">冀以尘雾之微补益山海，荧烛末光增辉日月</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text">说明</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E5%BF%83%E5%BE%97"><span class="toc-number">2.</span> <span class="toc-text">个人心得</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SSH%E5%AF%86%E9%92%A5"><span class="toc-number">2.1.</span> <span class="toc-text">SSH密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E5%88%86%E6%94%AF%E5%91%BD%E5%90%8D"><span class="toc-number">2.2.</span> <span class="toc-text">主分支命名</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E6%8E%A5%E4%B8%80%E8%A7%88"><span class="toc-number">3.</span> <span class="toc-text">链接一览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%90%AD%E5%BB%BA"><span class="toc-number">3.1.</span> <span class="toc-text">搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E6%96%B0%E9%83%A8%E7%BD%B2"><span class="toc-number">3.2.</span> <span class="toc-text">重新部署</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3"><span class="toc-number">3.3.</span> <span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3"><span class="toc-number">3.4.</span> <span class="toc-text">主题文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%96%E5%B1%B1%E4%B9%8B%E7%9F%B3"><span class="toc-number">3.5.</span> <span class="toc-text">他山之石</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-number">4.</span> <span class="toc-text">后记</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%90%8E%E6%9B%B4%E6%96%B0%E6%97%B6%E9%97%B4%EF%BC%9A"><span class="toc-number">5.</span> <span class="toc-text">最后更新时间：</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/time/24-years-old/" title="24-years-old"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="24-years-old"/></a><div class="content"><a class="title" href="/2025/08/19/time/24-years-old/" title="24-years-old">24-years-old</a><time datetime="2025-08-19T16:32:00.000Z" title="发表于 2025-08-20 00:32:00">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/07/time/2025-half/" title="2025-half"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025-half"/></a><div class="content"><a class="title" href="/2025/07/07/time/2025-half/" title="2025-half">2025-half</a><time datetime="2025-07-07T15:04:58.000Z" title="发表于 2025-07-07 23:04:58">2025-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年终自我枪毙"/></a><div class="content"><a class="title" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙">2024年终自我枪毙</a><time datetime="2024-12-23T15:03:30.000Z" title="发表于 2024-12-23 23:03:30">2024-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出山"/></a><div class="content"><a class="title" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山">出山</a><time datetime="2024-11-26T17:19:59.000Z" title="发表于 2024-11-27 01:19:59">2024-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/essay/MyGO/" title="MyGO"><img src="/images/posts/essay/MyGO/image-20240818041546407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyGO"/></a><div class="content"><a class="title" href="/2024/08/18/essay/MyGO/" title="MyGO">MyGO</a><time datetime="2024-08-18T15:42:57.000Z" title="发表于 2024-08-18 23:42:57">2024-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By BlockedByRain</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

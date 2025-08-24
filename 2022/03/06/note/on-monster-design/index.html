@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>浅谈怪物设计-以漂浮灵为例 | 尼伯龙根</title><meta name="keywords" content="怪物设计 原神"><meta name="author" content="BlockedByRain"><meta name="copyright" content="BlockedByRain"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言漂浮灵作为一出现就被广大玩家认为是最垃圾的设计，能同时得到这让广泛而相近的评价，很难说这样的设计到底是失败还是成功。( 作为游戏中除了UI外和玩家互动最多的对象，怪物的设计往往是许多游戏花费大量时间精心打磨的核心部分，乃至会为了一个Boss花费数月的时间。 看到一个UP主做的视频感觉受益良多，故在此结合个人理解二次加工一下，链接在末尾给出。 怎样做出好的设计既然要证明是漂浮灵是很垃圾的设计，那">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈怪物设计-以漂浮灵为例">
+<meta property="og:url" content="https://blockedbyrain.github.io/2022/03/06/note/on-monster-design/index.html">
+<meta property="og:site_name" content="尼伯龙根">
+<meta property="og:description" content="前言漂浮灵作为一出现就被广大玩家认为是最垃圾的设计，能同时得到这让广泛而相近的评价，很难说这样的设计到底是失败还是成功。( 作为游戏中除了UI外和玩家互动最多的对象，怪物的设计往往是许多游戏花费大量时间精心打磨的核心部分，乃至会为了一个Boss花费数月的时间。 看到一个UP主做的视频感觉受益良多，故在此结合个人理解二次加工一下，链接在末尾给出。 怎样做出好的设计既然要证明是漂浮灵是很垃圾的设计，那">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blockedbyrain.github.io/images/topimg/1.jpg">
+<meta property="article:published_time" content="2022-03-06T15:53:54.000Z">
+<meta property="article:modified_time" content="2025-08-24T09:39:06.545Z">
+<meta property="article:author" content="BlockedByRain">
+<meta property="article:tag" content="怪物设计 原神">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blockedbyrain.github.io/images/topimg/1.jpg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blockedbyrain.github.io/2022/03/06/note/on-monster-design/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '浅谈怪物设计-以漂浮灵为例',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 17:39:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/topimg/1.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">尼伯龙根</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">浅谈怪物设计-以漂浮灵为例</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-03-06T15:53:54.000Z" title="发表于 2022-03-06 23:53:54">2022-03-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T09:39:06.545Z" title="更新于 2025-08-24 17:39:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="浅谈怪物设计-以漂浮灵为例"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>漂浮灵作为一出现就被广大玩家认为是最垃圾的设计，能同时得到这让广泛而相近的评价，很难说这样的设计到底是失败还是成功。(</p>
+<p>作为游戏中除了UI外和玩家互动最多的对象，怪物的设计往往是许多游戏花费大量时间精心打磨的核心部分，乃至会为了一个Boss花费数月的时间。</p>
+<p>看到一个UP主做的视频感觉受益良多，故在此结合个人理解二次加工一下，链接在末尾给出。</p>
+<h1 id="怎样做出好的设计"><a href="#怎样做出好的设计" class="headerlink" title="怎样做出好的设计"></a>怎样做出好的设计</h1><p>既然要证明是漂浮灵是很垃圾的设计，那么首先我们要先给出定义：什么是好的设计。</p>
+<p>个人认为原神中设计的最好的非Boss级怪物是草史莱姆。</p>
+<h2 id="怪物与环境的交互"><a href="#怪物与环境的交互" class="headerlink" title="怪物与环境的交互"></a>怪物与环境的交互</h2><h3 id="怪物存在的原因是否自洽"><a href="#怪物存在的原因是否自洽" class="headerlink" title="怪物存在的原因是否自洽"></a>怪物存在的原因是否自洽</h3><p>游戏背景、世界观设定</p>
+<p>比如不能在一个国风仙侠世界里突然出现一个航空母舰对吧</p>
+<p>原神的世界观里也不能出现超越七元素的属性</p>
+<p>如果这个部分出现问题则会让玩家感觉这个世界不够真实、不够有代入感</p>
+<h3 id="怪物的分布是否合理"><a href="#怪物的分布是否合理" class="headerlink" title="怪物的分布是否合理"></a>怪物的分布是否合理</h3><p>怪物存在的点位是否遵循某种直观的规律或者隐性的规律</p>
+<p>比如说龙蜥只存在于璃月境内</p>
+<p>同上</p>
+<h3 id="怪物和环境是否有交互-怪物的行为状态是否会根据环境发生改变"><a href="#怪物和环境是否有交互-怪物的行为状态是否会根据环境发生改变" class="headerlink" title="怪物和环境是否有交互/怪物的行为状态是否会根据环境发生改变"></a>怪物和环境是否有交互/怪物的行为状态是否会根据环境发生改变</h3><p>交互方面分为待机状态下和战斗状态下，比方说在篝火旁的丘丘人会围在跳舞，帐篷里的则会睡觉</p>
+<p>而战斗状态下则需要更细节的设计，但是也更考验设计水平。如丘丘人无法再水里掏出火史莱姆，可以利用环境和天气来破坏深渊法师的护盾</p>
+<p>这是游戏代入感的组成部分</p>
+<h2 id="怪物与玩家的交互"><a href="#怪物与玩家的交互" class="headerlink" title="怪物与玩家的交互"></a>怪物与玩家的交互</h2><p>游戏体验的重要组成部分，如果打怪是游戏的重要玩法的话</p>
+<h3 id="怪物是否会因为玩家的不同行为而改变自己的状态"><a href="#怪物是否会因为玩家的不同行为而改变自己的状态" class="headerlink" title="怪物是否会因为玩家的不同行为而改变自己的状态"></a>怪物是否会因为玩家的不同行为而改变自己的状态</h3><h4 id="硬直动作"><a href="#硬直动作" class="headerlink" title="硬直动作"></a>硬直动作</h4><p>打击感的构成部分</p>
+<h4 id="元素反应"><a href="#元素反应" class="headerlink" title="元素反应"></a>元素反应</h4><p>风元素吸引（元素交互</p>
+<p>冻结反应、超载击飞（元素反应</p>
+<h4 id="怪物特性"><a href="#怪物特性" class="headerlink" title="怪物特性"></a>怪物特性</h4><p>火史莱姆遇水冷却</p>
+<p>风史莱姆上天被打爆</p>
+<p>小宝瘫痪</p>
+<p>骗骗花破盾虚弱</p>
+<h3 id="怪物是否会因玩家的不同状态而做出不同行动"><a href="#怪物是否会因玩家的不同状态而做出不同行动" class="headerlink" title="怪物是否会因玩家的不同状态而做出不同行动"></a>怪物是否会因玩家的不同状态而做出不同行动</h3><h4 id="距离、方位"><a href="#距离、方位" class="headerlink" title="距离、方位"></a>距离、方位</h4><p>太远远程手段、太近拉开距离</p>
+<p>前方前扑、左右横扫、后方甩尾</p>
+<p>草史莱姆的音乐播放器</p>
+<h4 id="特殊行动"><a href="#特殊行动" class="headerlink" title="特殊行动"></a>特殊行动</h4><p>只狼的一心喝药突刺</p>
+<h4 id="符合尝试"><a href="#符合尝试" class="headerlink" title="符合尝试"></a>符合尝试</h4><p>蓄力代表释放大招、倒地硬直可以多输出</p>
+<h2 id="怪物与怪物的交互"><a href="#怪物与怪物的交互" class="headerlink" title="怪物与怪物的交互"></a>怪物与怪物的交互</h2><p>一般比较少，否则会导致布怪受到局限，不过对于游戏品质和玩家体验会有所帮助</p>
+<p>愚人众团队的战法牧，海乱鬼的血缘，双龙蜥的联动</p>
+<h1 id="细数漂浮灵的罪"><a href="#细数漂浮灵的罪" class="headerlink" title="细数漂浮灵的罪"></a>细数漂浮灵的罪</h1><p>既然已经知道了那些是好的设计，那么就可以细数漂浮灵犯下的罪行了。</p>
+<p>其一，不符合其世界观。作为低于无相级的元素生物，竟然无法附着元素，除了恶心玩家外并没有让玩家有额外收益。史莱姆即使是免疫对应属性伤害，但是也更容易让玩家打出元素反应，而漂浮灵竟然无法被附着元素，无相级元素创生物直呼内行。</p>
+<p>其二，分布几乎没有规律。渊下宫可以出现火漂浮灵，山坡上可以出现岩漂浮灵，很难想象其布置规律。</p>
+<p>其三，与玩家的交互过少。作为一个能飞的小型生物（至少看上去是这样），竟然无法被风系聚集，这明显与常识不符，要知道无论是野外采集物还是怪物掉落素材都是可以被聚集的，这个属实违背了玩家通过游玩自行总结的规律，此处也照应第一条，若是想要漂浮灵无法被聚集应该给它安排一个合理的背景。</p>
+<p>其四，漂浮灵跟现有的所有怪物都没有互动。既不像深渊法师天团可以互相内鬼破盾，也没有对友方提供增益的原魔技能。对于玩家来说，对漂浮灵并没有什么有趣的额外解，只能硬打。相信很多玩家用常规击杀外的方法解决敌人会有成就感，包括但不限于：琴的坠崖穿风刺，风系的反应互相破盾（特指孤云阁法师天团），通过水地形破火法的盾，爆头小宝。而漂浮灵根本没有类似的机制，即其机制只有惩罚玩家而没有奖励玩家，这是相当要命的，玩家很容易生出一种被恶心的感觉。这也就是漂浮灵被玩家群体吐槽的根本原因：我充钱充到怪上了?</p>
+<h1 id="改进方案"><a href="#改进方案" class="headerlink" title="改进方案"></a>改进方案</h1><p>既然知道了好的设计以及分析了漂浮灵的缺点，我们应该可以根据这样的思路去推想一下怎样在保留漂浮灵这个怪物的前提下让它变得更有趣一点。</p>
+<p><del>我想到了一个绝佳的修改方案，可惜这里位置太小写不下</del></p>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qL4y1x71c">【原神】飘浮灵游戏机制解析与改动</a></p>
+<span id="more"></span>
+
+<hr>
+<p>The story is not over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BlockedByRain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blockedbyrain.github.io/2022/03/06/note/on-monster-design/">https://blockedbyrain.github.io/2022/03/06/note/on-monster-design/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blockedbyrain.github.io" target="_blank">尼伯龙根</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%AA%E7%89%A9%E8%AE%BE%E8%AE%A1-%E5%8E%9F%E7%A5%9E/">怪物设计 原神</a></div><div class="post_share"><div class="social-share" data-image="/images/topimg/1.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/06/30/time/2022-half/"><img class="prev-cover" src="/images/topimg/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">2022-半年记</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/01/note/combat-work-notes/"><img class="next-cover" src="/images/topimg/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">有关战斗的工作笔记</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BlockedByRain</div><div class="author-info__description">或许是不知梦的缘故，流离之人追逐幻影</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BlockedByRain" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1596127831@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">冀以尘雾之微补益山海，荧烛末光增辉日月</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%8E%E6%A0%B7%E5%81%9A%E5%87%BA%E5%A5%BD%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">2.</span> <span class="toc-text">怎样做出好的设计</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E4%B8%8E%E7%8E%AF%E5%A2%83%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">2.1.</span> <span class="toc-text">怪物与环境的交互</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E5%AD%98%E5%9C%A8%E7%9A%84%E5%8E%9F%E5%9B%A0%E6%98%AF%E5%90%A6%E8%87%AA%E6%B4%BD"><span class="toc-number">2.1.1.</span> <span class="toc-text">怪物存在的原因是否自洽</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E7%9A%84%E5%88%86%E5%B8%83%E6%98%AF%E5%90%A6%E5%90%88%E7%90%86"><span class="toc-number">2.1.2.</span> <span class="toc-text">怪物的分布是否合理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E5%92%8C%E7%8E%AF%E5%A2%83%E6%98%AF%E5%90%A6%E6%9C%89%E4%BA%A4%E4%BA%92-%E6%80%AA%E7%89%A9%E7%9A%84%E8%A1%8C%E4%B8%BA%E7%8A%B6%E6%80%81%E6%98%AF%E5%90%A6%E4%BC%9A%E6%A0%B9%E6%8D%AE%E7%8E%AF%E5%A2%83%E5%8F%91%E7%94%9F%E6%94%B9%E5%8F%98"><span class="toc-number">2.1.3.</span> <span class="toc-text">怪物和环境是否有交互&#x2F;怪物的行为状态是否会根据环境发生改变</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E4%B8%8E%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">2.2.</span> <span class="toc-text">怪物与玩家的交互</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E6%98%AF%E5%90%A6%E4%BC%9A%E5%9B%A0%E4%B8%BA%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%B8%8D%E5%90%8C%E8%A1%8C%E4%B8%BA%E8%80%8C%E6%94%B9%E5%8F%98%E8%87%AA%E5%B7%B1%E7%9A%84%E7%8A%B6%E6%80%81"><span class="toc-number">2.2.1.</span> <span class="toc-text">怪物是否会因为玩家的不同行为而改变自己的状态</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A1%AC%E7%9B%B4%E5%8A%A8%E4%BD%9C"><span class="toc-number">2.2.1.1.</span> <span class="toc-text">硬直动作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%8F%8D%E5%BA%94"><span class="toc-number">2.2.1.2.</span> <span class="toc-text">元素反应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E7%89%B9%E6%80%A7"><span class="toc-number">2.2.1.3.</span> <span class="toc-text">怪物特性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E6%98%AF%E5%90%A6%E4%BC%9A%E5%9B%A0%E7%8E%A9%E5%AE%B6%E7%9A%84%E4%B8%8D%E5%90%8C%E7%8A%B6%E6%80%81%E8%80%8C%E5%81%9A%E5%87%BA%E4%B8%8D%E5%90%8C%E8%A1%8C%E5%8A%A8"><span class="toc-number">2.2.2.</span> <span class="toc-text">怪物是否会因玩家的不同状态而做出不同行动</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%9D%E7%A6%BB%E3%80%81%E6%96%B9%E4%BD%8D"><span class="toc-number">2.2.2.1.</span> <span class="toc-text">距离、方位</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E8%A1%8C%E5%8A%A8"><span class="toc-number">2.2.2.2.</span> <span class="toc-text">特殊行动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AC%A6%E5%90%88%E5%B0%9D%E8%AF%95"><span class="toc-number">2.2.2.3.</span> <span class="toc-text">符合尝试</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%AA%E7%89%A9%E4%B8%8E%E6%80%AA%E7%89%A9%E7%9A%84%E4%BA%A4%E4%BA%92"><span class="toc-number">2.3.</span> <span class="toc-text">怪物与怪物的交互</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%86%E6%95%B0%E6%BC%82%E6%B5%AE%E7%81%B5%E7%9A%84%E7%BD%AA"><span class="toc-number">3.</span> <span class="toc-text">细数漂浮灵的罪</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%94%B9%E8%BF%9B%E6%96%B9%E6%A1%88"><span class="toc-number">4.</span> <span class="toc-text">改进方案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">5.</span> <span class="toc-text">引用</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/time/24-years-old/" title="24-years-old"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="24-years-old"/></a><div class="content"><a class="title" href="/2025/08/19/time/24-years-old/" title="24-years-old">24-years-old</a><time datetime="2025-08-19T16:32:00.000Z" title="发表于 2025-08-20 00:32:00">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/07/time/2025-half/" title="2025-half"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025-half"/></a><div class="content"><a class="title" href="/2025/07/07/time/2025-half/" title="2025-half">2025-half</a><time datetime="2025-07-07T15:04:58.000Z" title="发表于 2025-07-07 23:04:58">2025-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年终自我枪毙"/></a><div class="content"><a class="title" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙">2024年终自我枪毙</a><time datetime="2024-12-23T15:03:30.000Z" title="发表于 2024-12-23 23:03:30">2024-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出山"/></a><div class="content"><a class="title" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山">出山</a><time datetime="2024-11-26T17:19:59.000Z" title="发表于 2024-11-27 01:19:59">2024-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/essay/MyGO/" title="MyGO"><img src="/images/posts/essay/MyGO/image-20240818041546407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyGO"/></a><div class="content"><a class="title" href="/2024/08/18/essay/MyGO/" title="MyGO">MyGO</a><time datetime="2024-08-18T15:42:57.000Z" title="发表于 2024-08-18 23:42:57">2024-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By BlockedByRain</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

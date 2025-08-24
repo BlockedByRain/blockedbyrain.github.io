@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>原神的伤害计算 | 尼伯龙根</title><meta name="keywords" content="原神"><meta name="author" content="BlockedByRain"><meta name="copyright" content="BlockedByRain"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言最近工作牵扯到伤害计算流程，正好对原神的伤害计算进行一个拆的解，毕竟没有借鉴就没有进步嘛。 此篇也正是作为原神解析系列的第一篇，尽可能地少牵扯其他不必要的系统。 公式直接进行一个公式的贴： 攻击力×技能倍率×（1+伤害加成百分比）×怪物抗性减免百分比×怪物防御减免百分比×（1+暴击伤害百分比）×（1+元素精通增幅百分比）  游戏内测阶段据说是存在等级压制减伤的，不过后来公测的时候在1.5版本左">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原神的伤害计算">
+<meta property="og:url" content="https://blockedbyrain.github.io/2022/02/10/note/Genshin-damage/index.html">
+<meta property="og:site_name" content="尼伯龙根">
+<meta property="og:description" content="前言最近工作牵扯到伤害计算流程，正好对原神的伤害计算进行一个拆的解，毕竟没有借鉴就没有进步嘛。 此篇也正是作为原神解析系列的第一篇，尽可能地少牵扯其他不必要的系统。 公式直接进行一个公式的贴： 攻击力×技能倍率×（1+伤害加成百分比）×怪物抗性减免百分比×怪物防御减免百分比×（1+暴击伤害百分比）×（1+元素精通增幅百分比）  游戏内测阶段据说是存在等级压制减伤的，不过后来公测的时候在1.5版本左">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blockedbyrain.github.io/images/posts/note/Genshin-damage/critical.png">
+<meta property="article:published_time" content="2022-02-10T18:49:16.000Z">
+<meta property="article:modified_time" content="2025-08-24T09:39:06.544Z">
+<meta property="article:author" content="BlockedByRain">
+<meta property="article:tag" content="原神">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blockedbyrain.github.io/images/posts/note/Genshin-damage/critical.png"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blockedbyrain.github.io/2022/02/10/note/Genshin-damage/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '原神的伤害计算',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 17:39:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/posts/note/Genshin-damage/critical.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">尼伯龙根</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">原神的伤害计算</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-10T18:49:16.000Z" title="发表于 2022-02-11 02:49:16">2022-02-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T09:39:06.544Z" title="更新于 2025-08-24 17:39:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="原神的伤害计算"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>最近工作牵扯到伤害计算流程，正好对原神的伤害计算进行一个拆的解，毕竟没有借鉴就没有进步嘛。</p>
+<p>此篇也正是作为原神解析系列的第一篇，尽可能地少牵扯其他不必要的系统。</p>
+<h1 id="公式"><a href="#公式" class="headerlink" title="公式"></a>公式</h1><p>直接进行一个公式的贴：</p>
+<p><strong>攻击力×技能倍率×（1+伤害加成百分比）×怪物抗性减免百分比×怪物防御减免百分比×（1+暴击伤害百分比）×（1+元素精通增幅百分比）</strong></p>
+<blockquote>
+<p>游戏内测阶段据说是存在等级压制减伤的，不过后来公测的时候在1.5版本左右删掉了，故这里不做记录，有兴趣者可自行查阅</p>
+</blockquote>
+<h1 id="乘区"><a href="#乘区" class="headerlink" title="乘区"></a>乘区</h1><p>乘区的含义为公式中一个单独的乘数，由上述公式可以看出该游戏计算方式为<strong>不同乘区内加算不同乘区外乘算</strong>，这是<strong>计算的前提，伤害控制的基准</strong>。</p>
+<h2 id="攻击力乘区"><a href="#攻击力乘区" class="headerlink" title="攻击力乘区"></a>攻击力乘区</h2><p>攻击力可以分为基础攻击力和额外攻击力，面板上显示的其实是总攻击力，计算公式为基础攻击力＋基础攻击力×（1+额外攻击力百分比）+固定额外攻击力。</p>
+<p><img src="/images/posts/note/Genshin-damage/attack.png" alt="attack"></p>
+<p>常说的<strong>白字</strong>其实就是指基础攻击力，基础攻击力<strong>只与</strong> <em>等级和武器攻击力</em> 有关。其余的所有攻击力来源都视为额外攻击力以<strong>绿字</strong>呈现，其中包括但不限于：圣遗物大小攻击、武器攻击百分比词条、攻击类食物、班尼特大招。</p>
+<h2 id="倍率乘区"><a href="#倍率乘区" class="headerlink" title="倍率乘区"></a>倍率乘区</h2><p>直接写在天赋面板上的数字，目前<strong>只与</strong> <em>技能等级</em> 相关。不过后续这里涉及到一个<strong>伤害值</strong>的概念，后面会讲到。</p>
+<p><img src="/images/posts/note/Genshin-damage/magnification.png" alt="magnification"></p>
+<h2 id="加伤乘区"><a href="#加伤乘区" class="headerlink" title="加伤乘区"></a>加伤乘区</h2><p>本游戏最多的乘区，来源众多，包括但不限于：圣遗物杯子主属性、圣遗物套装效果、武器特效、角色天赋、药剂、深渊场地效果。需要注意的是全伤和元素伤害是加算的关系。</p>
+<p>需要额外补充的是，敌人身上的易伤和自身的加伤是加算的关系，这也是开服“半部讨龙真君-莫娜”的由来。</p>
+<p><img src="/images/posts/note/Genshin-damage/damage-bonus.png" alt="damage-bonus"></p>
+<h2 id="抗性乘区"><a href="#抗性乘区" class="headerlink" title="抗性乘区"></a>抗性乘区</h2><p>不同的怪物抗性有所不同，这里直接引用别人测的结果。</p>
+<p>这个乘区最泛用的是风套的40减抗。</p>
+<blockquote>
+<p>当减抗幅度超出敌人原有抗性时，超出幅度会变为伤害增幅，该效果与伤害乘区独立且逐渐递减。</p>
+</blockquote>
+<p><img src="/images/posts/note/Genshin-damage/resistance.png" alt="resistance"></p>
+<h2 id="防御乘区"><a href="#防御乘区" class="headerlink" title="防御乘区"></a>防御乘区</h2><p>怪物防御减免百分比的计算公式如下，其中X为减防系数</p>
+<p><strong>（角色等级+100）÷【（1-X）×（怪物等级＋100）+角色等级+100】</strong></p>
+<p>减防效果比较稀有，一般在命座或天赋中有出现，如雷泽4命、丽莎天赋。</p>
+<p><img src="/images/posts/note/Genshin-damage/defense.png" alt="defense"></p>
+<h2 id="爆伤乘区"><a href="#爆伤乘区" class="headerlink" title="爆伤乘区"></a>爆伤乘区</h2><p>直接看面板，值得注意的是九条的六命效果不加在面板上，因为是单独作为某种属性的爆伤，猜测可能是单独进行了一次封装而不体现在面板上。</p>
+<blockquote>
+<p>面板上的爆伤计算时需要加100%</p>
+</blockquote>
+<p><img src="/images/posts/note/Genshin-damage/critical-damage.png" alt="critical-damage"></p>
+<h2 id="元素反应乘区"><a href="#元素反应乘区" class="headerlink" title="元素反应乘区"></a>元素反应乘区</h2><p>一般指的是元素精通带来的提升，另外还有一些比较少见的提升方式如莫娜2命。</p>
+<p><img src="/images/posts/note/Genshin-damage/elemental-reaction.png" alt="elemental-reaction"></p>
+<h2 id="独立乘区"><a href="#独立乘区" class="headerlink" title="独立乘区"></a>独立乘区</h2><p>另外还有一些独特的乘区独立于以上的计算方式，除了上述所说超过抗性的减抗可以看作是一个独立乘区外，另外比较出名的就是璃月剑仙的四命了。（至于这是不是bug那就只有程序员知道了</p>
+<p><img src="/images/posts/note/Genshin-damage/independent.png" alt="independent"></p>
+<h1 id="实测"><a href="#实测" class="headerlink" title="实测"></a>实测</h1><p>实践出真知，咱们还是得亲自上手测一测才能知道。</p>
+<h2 id="测试素材"><a href="#测试素材" class="headerlink" title="测试素材"></a>测试素材</h2><p><img src="/images/posts/note/Genshin-damage/Kamisato-Ayaka.png" alt="Kamisato-Ayaka"></p>
+<p><img src="/images/posts/note/Genshin-damage/talent.png" alt="talent"></p>
+<p><img src="/images/posts/note/Genshin-damage/skill.png" alt="skill"></p>
+<p><img src="/images/posts/note/Genshin-damage/enemy.png" alt="enemy"></p>
+<h2 id="数据汇总"><a href="#数据汇总" class="headerlink" title="数据汇总"></a>数据汇总</h2><p>测试角色为神里绫华</p>
+<p><strong>攻击力</strong> 为 <strong>2001</strong></p>
+<p><strong>技能倍率</strong> 为 <strong>407%</strong> </p>
+<p><strong>冰属性伤害加成</strong> 为61.6%，另外之后计算时会加上天赋的18%，即为 <strong>79.6%</strong></p>
+<p><strong>暴击伤害</strong> 为 193.3%，即计算时取 <strong>293.3%</strong></p>
+<p>测试对象为遗迹守卫</p>
+<p>由上图可知其 <strong>冰抗</strong> 为 **10%**，故 <strong>抗性乘区</strong> 为 <strong>90%</strong></p>
+<p>代入公式 <strong>（角色等级+100）÷【（1-X）×（怪物等级＋100）+角色等级+100】</strong></p>
+<p>此处没有减防手段，X取0，最后算出 <strong>防御乘区</strong> 为 <strong>50.67%</strong></p>
+<p>因此处不打元素反应，并不涉及反应乘区。</p>
+<p>据本人了解神里不存在独立乘区。</p>
+<p>所以<strong>理论伤害</strong>为</p>
+<p>2001 * 407% * 179.6% * 293.3% * 90% * 50.67% = <strong>19563.80416722242</strong></p>
+<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p><img src="/images/posts/note/Genshin-damage/no-critical.png" alt="no-critical"></p>
+<p>呃，没有关系，多试几次</p>
+<p><img src="/images/posts/note/Genshin-damage/critical.png" alt="critical"></p>
+<p><strong>实际伤害</strong>为<strong>19545</strong></p>
+<p><strong>计算误差</strong>为 (19563-19545)/19563=<strong>0.00920104278484895</strong> ，不到百分之零点一的误差。</p>
+<p>另外这里可以算多一下不暴击的情况：</p>
+<p><strong>理论伤害</strong>为</p>
+<p>2001 * 407% * 179.6% * 90% * 50.67% = <strong>6670.2366748116</strong></p>
+<p><strong>计算误差</strong>为 (6670-6662)/6670=<strong>0.0011994002998501</strong> ，百分之零点一刚出头的误差，可以忽略不计了。</p>
+<p>至此论证成功。</p>
+<h1 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h1><p>作为一款开放世界ARPG，原神的核心点其实是在<strong>战斗</strong>上，一切的设计围绕这一点展开，而战斗的核心是<strong>元素反应</strong>，可惜这里没有测到，<del>留到下一篇</del>。由于这里不想涉及太多数值，这里就简单聊一聊个人对于这个伤害计算流程的想法。</p>
+<h2 id="划分多个乘区的意义？"><a href="#划分多个乘区的意义？" class="headerlink" title="划分多个乘区的意义？"></a>划分多个乘区的意义？</h2><p>划分乘区从某种角度上说是提供了若干个<strong>维度</strong>来对角色的<strong>强度</strong>进行<strong>考量</strong>，比方说有的角色低攻击高增伤、低增伤高攻击等，可以提供更多的设计方向。除此之外可以通过对不同乘区的数值投放来整体把握强度，保证不会太偏离预期。另外上面讲倍率的时候提到<strong>伤害值</strong>这个概念，这里补充一下。</p>
+<blockquote>
+<p>伤害值这个概念最早出现于改版钟离后的天赋，在计算中该值会加到攻击力与倍率的相乘结果中在进行后续计算，即可以吃到暴伤和加伤的效果。</p>
+</blockquote>
+<h2 id="这个伤害值有什么用呢？"><a href="#这个伤害值有什么用呢？" class="headerlink" title="这个伤害值有什么用呢？"></a>这个伤害值有什么用呢？</h2><p>游戏现在开服有一年半的时间，还没有出现过<strong>固伤辅助</strong>，在钟离改动后一年多里这个机制陆陆续续出现在了不少角色和武器上，而现在<strong>伤害值</strong>这个概念却又放在了云堇、申鹤的身上。云堇和申鹤我认为是很有说法的角色，个人认为是策划在<strong>机制</strong>方面的又一次新尝试。</p>
+<p>至于为什么我看好这两个角色，他们两个可以说是目前仅有的两个固伤辅助，他们并非能打出多高的伤害，而是通过技能将自身的属性<strong>换算</strong>成队友的伤害来让队友打输出。</p>
+<p><del>快进到出一个全队加攻击力、防御，申鹤云堇和前台角色一起吃到加成，直接左脚踩右脚进行一个梯云纵</del></p>
+<blockquote>
+<p>这个换算可能有人难以理解，这里说明一下。已知这个伤害值是加到攻击力和倍率的相乘结果上的，那么我们是否可以简单的理解成这是一个<strong>不是相乘而是相加的独立乘区</strong>？答案当然是肯定的。这意味着策划已经开始准备打破当初设定的“天理”，开创新的伤害计算流程。</p>
+<p>PS：这里可以参考LOL中赵信的Q技能和诺手的W技能，效果是一样的。（诺手无限火力一刀一个小朋友的最根本原因是因为他W的伤害可以吃到爆伤加成。）</p>
+</blockquote>
+<p>而明白了它们之间的换算关系就很好理解了，<strong>固伤辅助可以借用他人的加伤乘区和反应乘区，变相提升了其利用率</strong>。举个隔壁的例子就是LOL里的露露和猫咪，本身不具有多强的个人能力，但是和队友在一起时就能通过1+1让自己发挥出大于1的能力，另外更重要的是它们都是<strong>脱手</strong>技能！</p>
+<h2 id="脱手为什么是神？"><a href="#脱手为什么是神？" class="headerlink" title="脱手为什么是神？"></a>脱手为什么是神？</h2><p>脱手为什么是神？在绝大多数队伍切人战斗的游戏里，游戏发展到一定的程度必然会出现在<strong>后台给予前台角色能力</strong>的角色，这不但仅仅是原神或者隔壁的崩三，就连远到有点离谱的洛克王国和赛尔号都已经往这条路走了好一段了。</p>
+<p>这样做的其目的之一是为了防止前台角色能力过于强大带来的<strong>数值膨胀</strong>失控导致玩家流失，其二是拓宽设计方向，在整体强度不会有太大变动的前提下尽可能多的设计出玩家愿意买账的角色，毕竟谁都不喜欢自己刚练的角色一下就被人盖过了，让他们抽新的角色来替换队伍中的其他人他们反而更好接受。</p>
+<p>香菱、行秋、班尼特，讨论原神的战斗不可逾越的三座大山，其中行秋和班尼特又被玩家们称作水火双神，他们到底有着到底又怎样的力量？答案就是：脱手。</p>
+<p>原神中最宝贵的战斗资源是<strong>队伍的格子和站场时间</strong>，除开一些特殊的任务流程，所有人拥有一样的四个队伍位置和一样的角色站场时间，不会说你能带多几个或者同时上场操作几个。而在战场时间有限的前提下，一个辅助角色就需要在最短的战场时间里完成自己的职责，将宝贵的时间留给主C或者其他辅助。而上述三人的技能施放时间每个人不到3秒，也就是说只需要拿出三秒的时间，他们就能凭借自己的脱手技能在后台提供源源不断地助力，变相的达成同时上场多个人。</p>
+<p>个人认为原神中一个辅助的衡量维度有：泛用性、占用资源量、自充效率。而上述三人中行秋班尼特这水火双神几乎在三点上都做到了完美：多种场合万能挂件，出场开大即可下场，自我循环无需帮充。</p>
+<p>个人比较好奇的点是为什么这样强度的四星能够从内测走出来，虽然我个人没有内测资格但是听说三次加起来起码也有半年了，如此存在对比其他四星角色已经是<strong>肉眼可见的超模</strong>，导致一年半后的现在仍然活跃在深渊。当然也有人猜测是策划故意留出的强度，我并不知晓更多内情，这里也不好评价，不过根据新角色的设计来看他们对这两货已经表露出不满了。</p>
+<p>那么香菱又何德何能与他们并列呢？既不能自充，也需要队伍辅助打反应，甚至还有对活动范围的隐性要求。因为她具有<strong>锁面板机制</strong>。</p>
+<blockquote>
+<p>锁面板：记录技能使用者释放技能时的属性，无论其在技能其间收到何种影响均不影响其技能效果的结果计算。</p>
+<p>快照：每次进行技能效果的结果结算都实时的调用角色当前属性。</p>
+</blockquote>
+<p>举一个例子大家就懂了，一个每天晚上六点到十二点开放的自助餐餐厅，每个人最多2个小时，这时一个人卡在十一点五十九分买了票进场，那么他会怎么样？一般来说他根本买不到票，因为早已停止出票，退一步就算买到票了也要走，因为别人要关门了。</p>
+<p>把上述的自助餐餐厅看成队友提供的buff，2小时看成角色自身技能的持续时间，别的角色可能因为buff时间结束了失去了加成（吃不到了），但是香菱可以凭借自己的锁面板机制完整的将buff享受（吃完两小时）。而这一点也让香菱的地位变得不可动摇，无论是什么buff，只要能吃到1s，就一定能给你吃完。恰好这和班尼特完美契合，顺带班尼特解决了香菱在内测砍过的充能问题，于是这两人形成了牢不可破的组合。个人猜测时至今日仍<strong>没有5星通用辅助</strong>的出现可能是策划给这班尼特整不会了，不强别人不抽，太强就更惨，别人一起上，直接能让那些不好吃到buff的以往5星角色积灰，其后果更是不可想象。</p>
+<blockquote>
+<p>当然现在已经出现了很多特定条件下的专用辅助，在特定队伍中的表现是优于班尼特的，但是其完全上位依旧没有出现。</p>
+</blockquote>
+<h2 id="废人养成机？"><a href="#废人养成机？" class="headerlink" title="废人养成机？"></a>废人养成机？</h2><p>钟离，一个让策划首次作出妥协的角色，以一种近乎粗暴的方式平息了玩家带来的舆论，甚至导致直到现在为了针对钟离而设计出各种点名针对的怪物仍然被玩家口诛笔伐。</p>
+<p>无缝且大额的护盾，还带有一定的减抗能力，有了这样一个角色之后玩家与怪物之间几乎失去了90%的交互，因为怪物既然打不破盾，那么为什么要躲？为什么要了解它的技能和抬手动作？</p>
+<p>有关钟离的讨论已经够多了，我在这里只说一下我个人的看法。护盾这个东西可以看作是一个临时生命值一样的东西，设计本意是让玩家抵挡掉某些高风险的技能（关于生命值最近看到一些文章也有所感想，打算之后也整理出来，不过估计篇幅不是很长）。结果这一个全程的厚盾直接让大世界90%+的怪都破不了盾。而这就牵扯到当初把护盾和霸体绑定带来的弊端了：护盾可以有，霸体也可以有，但是两者绑在一起就不好了。当初就应该把护盾和霸体分离开，这样即使玩家拥有几乎全程无伤的护盾，但是面对一些可能造成击飞、倒地的技能仍然需要躲避，护盾最多只是队伍中不在需要治疗角色，但是与怪物的交互仍然保留一部分，至少不会像现在这样专门设计针对护盾的怪物而引来玩家群体的不满。</p>
+<p>据说马上到来的下版本会有吸盾怪出现，看来这个一年前埋下的伏笔还没有回收，而策划与钟离的故事也还远没有结束。</p>
+<h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><p>看了一眼文件建立时间，是上个月的十五号，现在是二月十一号凌晨两点半，终于把这一篇完工了，也埋下了新的坑（元素反应 和 生命值设计），希望寒假最后一点时间能多摸一点吧。</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><p><a target="_blank" rel="noopener" href="https://bbs.nga.cn/read.php?tid=23435445">[心得交流] 原神伤害数值计算与机制</a></p>
+<p><a target="_blank" rel="noopener" href="https://wiki.biligame.com/ys/?curid=7656">怪物抗性一览</a></p>
+<h2 id="致谢名单"><a href="#致谢名单" class="headerlink" title="致谢名单"></a>致谢名单</h2><p>小宝</p>
+<p><del>我老婆</del>神里绫华</p>
+<span id="more"></span>
+
+<hr>
+<p>The story is not over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BlockedByRain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blockedbyrain.github.io/2022/02/10/note/Genshin-damage/">https://blockedbyrain.github.io/2022/02/10/note/Genshin-damage/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blockedbyrain.github.io" target="_blank">尼伯龙根</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%8E%9F%E7%A5%9E/">原神</a></div><div class="post_share"><div class="social-share" data-image="/images/posts/note/Genshin-damage/critical.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/02/22/note/about-ACT/"><img class="prev-cover" src="/images/posts/note/about-ACT/head.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">动作的艺术-ACT</div></div></a></div><div class="next-post pull-right"><a href="/2022/02/10/note/first-step-to-great-design/"><img class="next-cover" src="/images/posts/note/first-step-to-great-design/play-all-the-things.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">游玩一切：伟大设计的第一步</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BlockedByRain</div><div class="author-info__description">或许是不知梦的缘故，流离之人追逐幻影</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BlockedByRain" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1596127831@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">冀以尘雾之微补益山海，荧烛末光增辉日月</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AC%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">公式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%98%E5%8C%BA"><span class="toc-number">3.</span> <span class="toc-text">乘区</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E5%8A%9B%E4%B9%98%E5%8C%BA"><span class="toc-number">3.1.</span> <span class="toc-text">攻击力乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%80%8D%E7%8E%87%E4%B9%98%E5%8C%BA"><span class="toc-number">3.2.</span> <span class="toc-text">倍率乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E4%BC%A4%E4%B9%98%E5%8C%BA"><span class="toc-number">3.3.</span> <span class="toc-text">加伤乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%97%E6%80%A7%E4%B9%98%E5%8C%BA"><span class="toc-number">3.4.</span> <span class="toc-text">抗性乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1%E4%B9%98%E5%8C%BA"><span class="toc-number">3.5.</span> <span class="toc-text">防御乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%86%E4%BC%A4%E4%B9%98%E5%8C%BA"><span class="toc-number">3.6.</span> <span class="toc-text">爆伤乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E7%B4%A0%E5%8F%8D%E5%BA%94%E4%B9%98%E5%8C%BA"><span class="toc-number">3.7.</span> <span class="toc-text">元素反应乘区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8B%AC%E7%AB%8B%E4%B9%98%E5%8C%BA"><span class="toc-number">3.8.</span> <span class="toc-text">独立乘区</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%9E%E6%B5%8B"><span class="toc-number">4.</span> <span class="toc-text">实测</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%B4%A0%E6%9D%90"><span class="toc-number">4.1.</span> <span class="toc-text">测试素材</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E6%B1%87%E6%80%BB"><span class="toc-number">4.2.</span> <span class="toc-text">数据汇总</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%95%E7%BB%93%E6%9E%9C"><span class="toc-number">4.3.</span> <span class="toc-text">测试结果</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">5.</span> <span class="toc-text">分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%92%E5%88%86%E5%A4%9A%E4%B8%AA%E4%B9%98%E5%8C%BA%E7%9A%84%E6%84%8F%E4%B9%89%EF%BC%9F"><span class="toc-number">5.1.</span> <span class="toc-text">划分多个乘区的意义？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%99%E4%B8%AA%E4%BC%A4%E5%AE%B3%E5%80%BC%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8%E5%91%A2%EF%BC%9F"><span class="toc-number">5.2.</span> <span class="toc-text">这个伤害值有什么用呢？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%84%B1%E6%89%8B%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E7%A5%9E%EF%BC%9F"><span class="toc-number">5.3.</span> <span class="toc-text">脱手为什么是神？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%9F%E4%BA%BA%E5%85%BB%E6%88%90%E6%9C%BA%EF%BC%9F"><span class="toc-number">5.4.</span> <span class="toc-text">废人养成机？</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A4%87%E6%B3%A8"><span class="toc-number">6.</span> <span class="toc-text">备注</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">6.1.</span> <span class="toc-text">引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%B4%E8%B0%A2%E5%90%8D%E5%8D%95"><span class="toc-number">6.2.</span> <span class="toc-text">致谢名单</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/time/24-years-old/" title="24-years-old"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="24-years-old"/></a><div class="content"><a class="title" href="/2025/08/19/time/24-years-old/" title="24-years-old">24-years-old</a><time datetime="2025-08-19T16:32:00.000Z" title="发表于 2025-08-20 00:32:00">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/07/time/2025-half/" title="2025-half"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025-half"/></a><div class="content"><a class="title" href="/2025/07/07/time/2025-half/" title="2025-half">2025-half</a><time datetime="2025-07-07T15:04:58.000Z" title="发表于 2025-07-07 23:04:58">2025-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年终自我枪毙"/></a><div class="content"><a class="title" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙">2024年终自我枪毙</a><time datetime="2024-12-23T15:03:30.000Z" title="发表于 2024-12-23 23:03:30">2024-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出山"/></a><div class="content"><a class="title" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山">出山</a><time datetime="2024-11-26T17:19:59.000Z" title="发表于 2024-11-27 01:19:59">2024-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/essay/MyGO/" title="MyGO"><img src="/images/posts/essay/MyGO/image-20240818041546407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyGO"/></a><div class="content"><a class="title" href="/2024/08/18/essay/MyGO/" title="MyGO">MyGO</a><time datetime="2024-08-18T15:42:57.000Z" title="发表于 2024-08-18 23:42:57">2024-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By BlockedByRain</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

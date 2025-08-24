@@ -1,0 +1,297 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>动作的艺术-ACT | 尼伯龙根</title><meta name="keywords" content="游戏设计"><meta name="author" content="BlockedByRain"><meta name="copyright" content="BlockedByRain"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="前言整理汇总关于ACT这个类型游戏的理解和认知，资料来源纷杂，望读者独立思考。 2022.3.7 补充：很多东西其实并非专用于ACT，在ARPG乃至RPG中亦有些许的参考价值，但是因为我懒，懒得新开一篇了，而且这里的大多数并没有达到单开一篇的体量，所以大家凑合着看吧。（逃 极小歼灭圈 试想一下在一个狭小的地形放上几只精英怪和一些骚扰的杂兵，作为玩家的你会有什么样的感受呢？  在动作游戏当中，缩小战">
+<meta property="og:type" content="article">
+<meta property="og:title" content="动作的艺术-ACT">
+<meta property="og:url" content="https://blockedbyrain.github.io/2022/02/22/note/about-ACT/index.html">
+<meta property="og:site_name" content="尼伯龙根">
+<meta property="og:description" content="前言整理汇总关于ACT这个类型游戏的理解和认知，资料来源纷杂，望读者独立思考。 2022.3.7 补充：很多东西其实并非专用于ACT，在ARPG乃至RPG中亦有些许的参考价值，但是因为我懒，懒得新开一篇了，而且这里的大多数并没有达到单开一篇的体量，所以大家凑合着看吧。（逃 极小歼灭圈 试想一下在一个狭小的地形放上几只精英怪和一些骚扰的杂兵，作为玩家的你会有什么样的感受呢？  在动作游戏当中，缩小战">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://blockedbyrain.github.io/images/posts/note/about-ACT/head.jpg">
+<meta property="article:published_time" content="2022-02-22T12:26:54.000Z">
+<meta property="article:modified_time" content="2025-08-24T09:39:06.544Z">
+<meta property="article:author" content="BlockedByRain">
+<meta property="article:tag" content="游戏设计">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blockedbyrain.github.io/images/posts/note/about-ACT/head.jpg"><link rel="shortcut icon" href="/images/favicon.png"><link rel="canonical" href="https://blockedbyrain.github.io/2022/02/22/note/about-ACT/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery@2/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '动作的艺术-ACT',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-08-24 17:39:06'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/images/avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><div class="data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/posts/note/about-ACT/head.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">尼伯龙根</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 万花生处</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 历历浮生</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 折叶为记</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 人世百态</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 高山仰止</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 我之为我</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">动作的艺术-ACT</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2022-02-22T12:26:54.000Z" title="发表于 2022-02-22 20:26:54">2022-02-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-08-24T09:39:06.544Z" title="更新于 2025-08-24 17:39:06">2025-08-24</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">8.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>24分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="动作的艺术-ACT"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>整理汇总关于ACT这个类型游戏的理解和认知，资料来源纷杂，望读者独立思考。</p>
+<p>2022.3.7 补充：很多东西其实并非专用于ACT，在ARPG乃至RPG中亦有些许的参考价值，但是因为我懒，懒得新开一篇了，而且这里的大多数并没有达到单开一篇的体量，所以大家凑合着看吧。（逃</p>
+<h1 id="极小歼灭圈"><a href="#极小歼灭圈" class="headerlink" title="极小歼灭圈"></a>极小歼灭圈</h1><blockquote>
+<p>试想一下在一个狭小的地形放上几只精英怪和一些骚扰的杂兵，作为玩家的你会有什么样的感受呢？</p>
+</blockquote>
+<p>在动作游戏当中，缩小战斗范围所带来的战斗强度（或者说战斗激烈程度）提升是远大于加强敌人配置的。这并非是玩家的主观认知 ，而是真正客观存在的。因为有一个绝大多数玩家都察觉不到的点：怪物的AI，当战斗范围缩小时，怪物发起进攻的平均时间就会显著缩短，从而变相<strong>减少了玩家的拉扯时间</strong>，逼迫玩家再次进行战斗。</p>
+<h1 id="引导BOSS"><a href="#引导BOSS" class="headerlink" title="引导BOSS"></a>引导BOSS</h1><p>一般来说动作游戏都会有一个新手BOSS一样的东西，用一种不太确切的方式来说可以说是“新人能力检测”，如果玩家连这个BOSS都打不过那么在设计者的角度上应该是无法体验游戏的全部内容了，<del>对于苦手玩家最后的仁慈</del>。</p>
+<h1 id="BOSS战"><a href="#BOSS战" class="headerlink" title="BOSS战"></a>BOSS战</h1><p>许多动作游戏最精彩也是最有魅力的部分，一场酣畅淋漓的BOSS战很有可能会是玩家多年以后回想起来关于这个游戏的最深刻记忆了。</p>
+<p>关于BOSS战这里个人给出一个观点：BOSS战就像一场考试，而交出多少分的答卷则取决于玩家的个人水平。相较于学校里的考试，玩家可以在交卷后立刻得到结果然后再次考试，不断地试错来总结经验并确认自己的经验是否正确。</p>
+<p>虽然主流上《只狼》并不被划分为ACT，但是其BOSS战还是深得其髓，前期不少精英怪都是给玩家提升能力和了解游戏机制以及特定情况的处理方法，所有点收束与一心老师。一旦玩家没有逃课，一心老师对你来说并非是什么难事，而如果是前面都在逃课邪道，那么一心老师则会让你把所有的课都上回来。</p>
+<h1 id="深度和精通"><a href="#深度和精通" class="headerlink" title="深度和精通"></a>深度和精通</h1><p>这一点其实并非是ACT的专属特点，<del>只是在我草稿里放了很久刚好有个机会放上了而已</del>。</p>
+<h2 id="深度"><a href="#深度" class="headerlink" title="深度"></a>深度</h2><p>游戏深度总是决定了游戏的上限。不同的玩家对游戏的探索程度各不相同，而足够的游戏深度可以让那些想要将游戏探索到更加极致的玩家有可玩的内容。游戏的深度并不是指游戏的元素要很多很复杂，那叫“广泛”而非“深入”，有深度是指在已有的元素上通过更合理的运用能达到更多的效果。</p>
+<blockquote>
+<p>一个动作游戏任何一个局面都应该有至少三种以上的解法。</p>
+</blockquote>
+<p>白金工作室做的游戏正有相当高的游戏深度。游戏最简单直接的游戏深度体现就是操作性，比如动作游戏的连招，在特定时机进行特定操作就会有特殊的效果。但连招这种只是最明面上的基本规则，想完全支撑游戏的深度还不够，在更深入的挖掘后游戏的特殊机制才是能够有更大开发空间的。则以此从探索层面上可以划分出三类玩家。</p>
+<h2 id="初心者-Learner"><a href="#初心者-Learner" class="headerlink" title="初心者 Learner"></a>初心者 Learner</h2><p>轻度/休闲/初级玩家：这些玩家可能并不会钻研规则，他们只需要保证他们所学习到的东西足以让他们把游戏进行下去就足够了。他们可能只会使用基本的操作，技能打来打去都是同样那么几套，可能在此基础上还手法粗糙又失误繁多，但他们同样可以乐在其中。</p>
+<h2 id="玩家-Player"><a href="#玩家-Player" class="headerlink" title="玩家 Player"></a>玩家 Player</h2><p>中度玩家：这些玩家会基于一些经验和已知的一些基本规则，合理地运用产生更高的收益。常见的表现是，可以在适当的时机打出连招，学会通过现状临时更改决策，更加大胆的尝试高风险操作。这就要求他们至少把基本规则运用的淋漓尽致，同时有自己的特定战术来运用他们。走位能力也包括这一层，可以理解为创造机会的能力，同样的局面可以通过走位达到新的解法。</p>
+<h3 id="combo-and-chain-组合与连锁"><a href="#combo-and-chain-组合与连锁" class="headerlink" title="combo and chain 组合与连锁"></a>combo and chain 组合与连锁</h3><h2 id="精通者-Master"><a href="#精通者-Master" class="headerlink" title="精通者 Master"></a>精通者 Master</h2><p>深度/硬核玩家：这些玩家已经不满足于将基本规则发挥到极致，开始寻找能够超越基本规则的特殊机制。而这些机制通常游戏根本就不会告诉你，甚至游戏设计师自己都不清楚，完全得自己找出来。但这类玩家通常也是其他游戏的玩家，凭借逻辑和经验大致就可以猜到游戏会有怎么样的特殊机制，比如常见的穿插技能或取消后摇之类的。而这些玩家甚至还可以熟练地将这些特殊机制和基本规则结合运用创造极高的收益。</p>
+<p>但游戏深度并非把游戏做得像高数题一样难就好，一个优秀的游戏需要同时照顾好这三类玩家。轻度玩家的占比非常高，而且很多第一次接触你这个游戏的玩家也算是轻度玩家，为他们留下一些低学习成本的内容，就不至于把玩家劝退。中度玩家体现了游戏的成长性，很多玩家总是在游玩一段时间后才能熟练的运用基本规则，所以在基本规则中准备一些需要较高学习成本的内容，才会让玩家有玩下去的动力。硬核玩家体现了整个游戏的顶尖水平，有意无意的一些特殊机制能让他们有把自己和别的玩家区分出来的想法，激发他们的探索欲，也可以抬高整个游戏的上限。</p>
+<p>另一点是，你的游戏不能仅有深度，更要懂得展现你的深度。常见的做法是，不同的游戏难度或者计算的得分，他会要求你摒弃一些浅层的做法而追求更高的收益。例如游戏在高难度下可能会给BOSS加上少量的回血避免你一点一点磨死，计分系统会给高难度操作技巧加上一大笔分帮助你得到一个更高的评价。当然，给深度玩家最好的反馈就是“打得爽”，我明明几刀就能斩了他，却偏偏要大费周章的运用上毕生所学，没啥，因为帅。</p>
+<h3 id="刮痧的艺术"><a href="#刮痧的艺术" class="headerlink" title="刮痧的艺术"></a>刮痧的艺术</h3><p>与游戏种类无关，一个足够深度的游戏，才能留住那些追逐上限核心玩家，才得以让游戏经久不衰。在这样的游戏里，玩家被允许用他们学到的各种知识来展现他们的游戏风格，从而才让他们知道游戏里的每一分努力都有回报。</p>
+<p>花费时间在一件事情上然后变强是很棒的体验，如果连花在游戏上的时间都在欺骗你，那么游戏就真的变得无趣了。</p>
+<h1 id="QTE"><a href="#QTE" class="headerlink" title="QTE"></a>QTE</h1><p>QTE，是quick time event的缩写，即快速点击反应事件。</p>
+<p>狭义的qte是需要屏幕上出现按键提示，玩家需要按照一定顺序或时间点按下相应的按键来完成，相对于游戏中的一般操作，QTE的奖励往往具有更好的效果。而现在许多不出现提示的情况也被认为是QTE，个人认为可以说是针对游戏群体的改良优化。</p>
+<p>动作游戏中一定的QTE可以提高玩家的沉浸感，可以用设置好的动画来调整玩家的游玩节奏，让玩家在激烈的战斗中脱离出来（处决），或是让玩家及时调整，集中注意力应对接下来的BOSS战（这个一时没想到）。</p>
+<p>需要注意的是QTE不是动作游戏的专属，比方说《只狼》中经典的红绿双点。<del>我红点呢</del></p>
+<p>嗯，音游的玩法本身算不算QTE？</p>
+<h1 id="打击感"><a href="#打击感" class="headerlink" title="打击感"></a>打击感</h1><p>打击感，一个从动作游戏诞生之初就讨论到今天的话题。现在还没有一个被业界公认的定义，个人的理解为：打击感是指玩家在游戏中进行攻击动作的反馈。</p>
+<p>打击感，先打出去，然后击中，最后才有感觉。</p>
+<p>这部分在策划职能里粗略的说了一下，这里重新整理一遍。</p>
+<p><del>在游戏的世界里追寻真实感是不是搞错了什么</del></p>
+<h2 id="来源"><a href="#来源" class="headerlink" title="来源"></a>来源</h2><p>常说的打击感主要分属于三个部分：听觉、视觉、触觉。</p>
+<h3 id="听觉"><a href="#听觉" class="headerlink" title="听觉"></a>听觉</h3><p>打击音效、脚步声、音质</p>
+<h3 id="视觉"><a href="#视觉" class="headerlink" title="视觉"></a>视觉</h3><p>伤害数字、屏幕抖动、镜头位移</p>
+<h3 id="触觉"><a href="#触觉" class="headerlink" title="触觉"></a>触觉</h3><p>手柄震动、扳机键回弹</p>
+<h3 id="一些不易觉察的反馈点"><a href="#一些不易觉察的反馈点" class="headerlink" title="一些不易觉察的反馈点"></a>一些不易觉察的反馈点</h3><p>UI的变化、视角的移动、输入反馈（操作时差）</p>
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>打击感的目的，就是让玩家感觉自己确实打中了。只要做到这点，就是好的打击感。碰撞发生的时候，音效和视觉是否能对齐。碰撞的表现是否清晰，或者形变，或者光影变化提示碰撞发生，或者有一组特效专门表示碰撞正在进行。</p>
+<p>除了视听之外，操作反馈也是打击感中很重要的一环。这里并非指的是手柄体验，而是玩家从输入，到游戏内做出动作，再到碰撞，其间的时间差是否合适，能不能让玩家清楚认识到这一下确确实实是自己打出来的，是打击感的基础。如果这点做不好，前者就算再出色，打击感也是失败的。一个不是我按出来的操作，再好又有什么用呢？</p>
+<p>一些做的好的游戏甚至可以通过打击感的反馈（动作幅度、特效、声效）来对该技能动作的伤害来进行一个预估。</p>
+<h1 id="ARPG和ACT"><a href="#ARPG和ACT" class="headerlink" title="ARPG和ACT"></a>ARPG和ACT</h1><p>以主流观点来说一般认为ARPG重数值，而ACT重深度。然而ACT游戏往往也都有着完整的成长体系，ARPG也并非靠着数值碾压可以关掉显示器打过去的游戏。诚然以难度来区分ARPG往往比ACT简单，但是两者的区别也绝不是简单的一句难度高低就可以给概括了的。</p>
+<p>在现在这个游戏层出不穷的时代，单一的玩法要素已经无法满足玩家的需求，act和arpg的界限已经开始也将会变的越来越模糊，想要对对两者划出一条具体的界限是不太可能的。但这样的玩法融合发展到一定程度，是会限制玩法的深度挖掘，还是会推动玩法的不断创新，亦或者都有。</p>
+<p>以我个人来说我更偏向于将视角建立在“游戏总体的玩法设计融洽为宜”的观点上，根据游戏预期的游玩侧重点去取舍单一要素的深度，而不是以单一要素来限制游戏的整体框架。毕竟游戏就在那里，类型不过是别人强加给它们的标签罢了。</p>
+<blockquote>
+<p>一些观点：</p>
+<p>ACT的本质是动作打怪连招，RPG的本质是打怪刷级刷装备</p>
+<p>ARPG遇到打不过的BOSS：md装备好菜，BOSS血条好厚，这辣鸡机制恶心人啊，什么几把判定！<br>ACT遇到打不过的BOSS：我好菜。</p>
+</blockquote>
+<p>最近有个群友问了我一个问题：<strong>只狼和怪猎的战斗节奏区别</strong>。我只能告诉他我没玩过怪猎，倒是可以给他讲讲只狼和鬼泣，结果讲了两句就把自己卡住了。遂有此节。</p>
+<h2 id="只狼与鬼泣的战斗节奏"><a href="#只狼与鬼泣的战斗节奏" class="headerlink" title="只狼与鬼泣的战斗节奏"></a>只狼与鬼泣的战斗节奏</h2><p><em>均为个人暴论</em></p>
+<p>在区分两者的战斗节奏前，我们应该了解只狼与鬼泣两款游戏的爽点区别在哪里，也就是<strong>设计者通过游戏想要给玩家带来什么样的体验</strong>。鬼泣的爽点刚好下面就有，这里不重复了。而只狼的爽点，个人认为在于<strong>了解敌人的招式和看破敌人的攻击</strong>。这两点很明显就是只狼的核心玩法，我将它们当作它们应该玩家应该获得的主要游戏体验应该也没什么问题。</p>
+<p>相对于鬼泣这样希望玩家不断精进自己的技术来提升自己的连招，只狼更鼓励的是了解敌人。以说人话的方式就是：<strong>鬼泣希望你玩自己的，而只狼希望你和敌人一起玩</strong>。这两点的佐证有很多，比如鬼泣的关底奖励、战斗中的连击评级提升，只狼中架势条满无视血条直接处决等。</p>
+<p>大家在玩鬼泣的时候或多或少的都去训练模式呆过，对那些大神开发的段子进行拙劣的模仿，逐渐形成一套自己的连招。在鬼泣这个游戏里，大多数时候敌人怎么样你并不关注，玩家会把<strong>注意力集中在自己身上</strong>：我魔力多少，我JC呢，我现在是啥武器/手？而只狼则不同，大多数时候你的<strong>注意力是会放在敌人身上</strong>的，你会在脑海里思考它会做什么，而你又要怎么做：危、危、危。</p>
+<p>这样的区别已经足够巨大，大到它们两个本身已经不是一个类型的游戏。</p>
+<h1 id="ACT的爽点"><a href="#ACT的爽点" class="headerlink" title="ACT的爽点"></a>ACT的爽点</h1><p>ACT以高频而爽快的战斗而闻名，而其爽点所在则是需要细细分析探讨的话题。</p>
+<p>这里给出几个总结：暴力、自我认同与控制感。</p>
+<h2 id="暴力"><a href="#暴力" class="headerlink" title="暴力"></a>暴力</h2><blockquote>
+<p>暴力是人类本能的需求，是人类潜意识里对于破坏、攻击的渴望。但是在秩序社会中，人类的攻击性、破坏欲因为各种规则而被抑制。因此在现代社会，电子游戏就成为了一个发泄这类本能的通道。而动作游戏中的各类设计更是能很好地满足人们对于暴力的心理需求。（电子游戏中的暴力元素是否有其副作用仍有待商榷）。</p>
+</blockquote>
+<p>攻击是人类的本能。也许是远古时期恶劣的环境让人只有保持攻击欲望才能获得足够生存的资源，即使是现在的人类也会突然产生破坏什么东西的冲动。</p>
+<p>一个很经典的例子就是捏方便面，真的很解压。</p>
+<h3 id="引发设计"><a href="#引发设计" class="headerlink" title="引发设计"></a>引发设计</h3><h4 id="打击感，不多谈"><a href="#打击感，不多谈" class="headerlink" title="打击感，不多谈"></a>打击感，不多谈</h4><h4 id="破坏生物肢体或建筑"><a href="#破坏生物肢体或建筑" class="headerlink" title="破坏生物肢体或建筑"></a>破坏生物肢体或建筑</h4><p>通过破坏生物的肢体或场景里的建筑以带来视觉上的冲击，并最终满足玩家的心理需求。</p>
+<h2 id="自我认同"><a href="#自我认同" class="headerlink" title="自我认同"></a>自我认同</h2><p>自我认同，即玩家对自己认同感，也可当作成就感。在动作游戏中，玩家往往会在克服困难、得到成功的反馈后，获得自我认同。</p>
+<h3 id="引发设计-1"><a href="#引发设计-1" class="headerlink" title="引发设计"></a>引发设计</h3><h4 id="提升难度"><a href="#提升难度" class="headerlink" title="提升难度"></a>提升难度</h4><blockquote>
+<ul>
+<li>增加真实的难度：在动作游戏的战斗系统中存在各种各样的难度比如增加敌人的强度（设计血厚攻高招式强的怪物）、增加操作的难度（设计复杂的目押连段、减少闪避的无敌帧）等等。玩家在克服这样真实的难度时会获得“自我认同”，但克服这样的难度也需要玩家实打实的练习与思考。</li>
+<li>增加虚假的难度：第二个思路是增加带给玩家”困难“的感觉。之所以是”困难的感觉“是因为其真实的难度并没有上升，而是通过视觉、听觉、场景、文字等烘托出来的”假难度“。例如《战神》《魔女》等游戏中那些体型巨大、压迫感十足的 BOSS。年龄大、经验丰富的玩家往往能识破虚假的难度。这样的玩家很难在《真三国无双》这样的割草游戏中获得自我认同，而年龄较低的玩家就能在自己操作的角色以一当千时获得非同寻常的成就感、认同感。</li>
+</ul>
+</blockquote>
+<h4 id="增强反馈"><a href="#增强反馈" class="headerlink" title="增强反馈"></a>增强反馈</h4><blockquote>
+<ul>
+<li>这样的设计能强化玩家克服困难后得到的反馈。在《鬼泣》中，玩家若在战斗中表现良好，战斗评价就会不断上升，在视觉与听觉上给予玩家反馈。在《猎天使魔女》中，玩家准确地闪避了敌人的攻击时，会获得”魔女时间“的奖励。打击感也能通过强化玩家”我成功打到了对方“这一感受来增强玩家的自我认同感。</li>
+</ul>
+</blockquote>
+<h2 id="控制欲"><a href="#控制欲" class="headerlink" title="控制欲"></a>控制欲</h2><p>控制欲是人类对消除未知、掌控一切的欲望。在有建造元素的游戏中，会体现为玩家对于每个建筑一丝不苟、井井有条的布置；在有探索元素的游戏中，会体现为玩家对于每个阴暗角落的不离不弃、不点亮地图每块阴影就浑身难受。而在动作游戏的战斗系统中，控制欲体现为玩家对自身角色的充分控制与玩家对敌人的控制，与之相伴而生的感受即为控制感或操作感。</p>
+<p>既然人类最原始的恐惧是未知，那么将所见的一切玩弄于掌中岂不正是一种天经地义的爽点？</p>
+<h3 id="引发设计-2"><a href="#引发设计-2" class="headerlink" title="引发设计"></a>引发设计</h3><h4 id="自我控制"><a href="#自我控制" class="headerlink" title="自我控制"></a>自我控制</h4><p>其实这里可以插入一下开放世界的设计思路，每一个看上去不寻常地方都藏着值得你去探索的东西：或是一个Boss或是稀有的道具。</p>
+<p>皇牌空战之我落地就算我输！</p>
+<blockquote>
+<ul>
+<li>被控角色能快速地执行玩家的输入：例如大部分动作游戏中角色的动作前后摇都很短，这都是为了能快速地对玩家当前输入（前摇短）与之后的输入（后摇短）做出反应。（马里奥能对玩家的输入进行快速的反应，只不过形式是动作上的改变，而不是角色速度上的快速变化）。</li>
+<li>被控角色能精准地执行玩家“内心的输入”：这里之所以使用“内心的输入”而非“输入”，是因为玩家有时候无法精准地通过通过手的操作来反应其内心真正的想法，即可能操作不得当或误操作。游戏需要通过识别这些误操作并将玩家真实的想法实现出来，以更好地满足玩家的控制欲。例如，在《忍龙》中，隼龙在攻击时会自动朝向身边最有可能的攻击目标。</li>
+<li>通过被控角色的动作增强控制感。例如《鬼泣》中的各种灵活的位移，能带给玩家强烈的控制感；在《猎天使魔女》中，贝优妮塔的动作夸张、富有张力，也能带给玩家强烈的控制感。（帅气的动作也能带给玩家”自我认可“）</li>
+</ul>
+</blockquote>
+<h4 id="敌人控制"><a href="#敌人控制" class="headerlink" title="敌人控制"></a>敌人控制</h4><p>皇牌空战之你落地就算我输！</p>
+<blockquote>
+<ul>
+<li>玩家能控制敌人的状态、位移等等。这一点可以通过《鬼泣》的浮空连段很好地体现。连段中，玩家角色可以通过各式各样的技能强制敌人按照自己所想进行位移、完全控制敌人。</li>
+</ul>
+</blockquote>
+<h1 id="技能树"><a href="#技能树" class="headerlink" title="技能树"></a>技能树</h1><h2 id="用处"><a href="#用处" class="headerlink" title="用处"></a>用处</h2><h3 id="循序渐进的展示游戏的复杂性"><a href="#循序渐进的展示游戏的复杂性" class="headerlink" title="循序渐进的展示游戏的复杂性"></a>循序渐进的展示游戏的复杂性</h3><p>通过控制技能树的解锁进度，设计者能更好的控制玩家在前期某些关卡的行为，甚至可以专门将前期的某些关卡当作教学关，来引导玩家学习解锁新技能，使用新技能完成当前关卡。</p>
+<blockquote>
+<p>比如要安排一个厚盾怪，可以让玩家在这一关之前学会具有破盾能力的招式，亦或者面对高机动性的敌人有让玩家跟上怪物的能力</p>
+</blockquote>
+<p>这也可以防止玩家在游戏初期直接立刻找到功利连招，导致某些技能根本没有使用的机会。</p>
+<h3 id="成长"><a href="#成长" class="headerlink" title="成长"></a>成长</h3><p>随着冒险一路变强，玩家从开始面对三两小怪如履薄冰到后来一人阻挡千军万马亦面不改色。技能这个词有时候并非专指招式，而是指玩家能力的一种统称。</p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><p>这个其实跟成长类似，玩家可以通过查看技能树，提前得知后续自己会拥有什么样的能力。从而给玩家一种玩下去的动力，毕竟如果在技能树里预览到一个很帅的大招相信很多人都想自己上手试试。</p>
+<blockquote>
+<p>快进到结合第一点设计一关大招表演关</p>
+</blockquote>
+<h3 id="体验方向"><a href="#体验方向" class="headerlink" title="体验方向"></a>体验方向</h3><p>通过设计不兼容的技能树路线来创造多种流派：类似于MMO的职业划分。</p>
+<h3 id="工作量"><a href="#工作量" class="headerlink" title="工作量"></a>工作量</h3><p>给客户端开发工程师<del>UI仔</del>找点事做</p>
+<h2 id="设计问题与可能的改进方式"><a href="#设计问题与可能的改进方式" class="headerlink" title="设计问题与可能的改进方式"></a>设计问题与可能的改进方式</h2><h3 id="没有足够的选择权衡性"><a href="#没有足够的选择权衡性" class="headerlink" title="没有足够的选择权衡性"></a>没有足够的选择权衡性</h3><p>很多游戏中只有正常根据流程游玩只要一周目或者二周目便可以解锁所有的技能树，这样虽然没有让玩家有过多的等待时间，防止玩家受不了设计者画的大饼而退游，但也减少了玩家对于技能树的深度探索。在所有技能都可以解锁的前提下，玩家不需要去权衡哪些技能/能力是关键的，只要在能选择的选项中选择自己觉得最好的，如此循环。因为既然最后所有技能都可以学到，那么只不过是先学后学的区别而已，只要选择当下的最优解便可以带来最好的游戏体验。</p>
+<p>如果让玩家无法同时选择所有的技能（通过类似最大技能点数的限制），那么玩家则需要对于整个技能树有整体的了解，并根据自己的游玩习惯来调整加点，同一个游戏会在不同玩家的不同喜好下出现迥然不同的游戏体验，这可以说是用一份游戏达成了复数游戏所能带来的体验。当然这种情况需要设计洗点的功能，给玩家”后悔药“，而这也可以作为游戏流程中的某一个支线或者隐藏，按下不表。</p>
+<blockquote>
+<p>英雄联盟之前那个天赋系列便是采用了这种方法，从最开始的21/9/0到基石天赋再到现在的基石天赋，设计师的确是花费了时间在玩家风格这一众口难调的领域上。不过英雄联盟的设计师明显喜欢教玩家玩游戏，常常由于某一次版本改动而让一个本来存在但是很少见的COMBO变得无解，随之迎来削弱。相关感想这里按下不表。</p>
+</blockquote>
+<h3 id="乏味的设计"><a href="#乏味的设计" class="headerlink" title="乏味的设计"></a>乏味的设计</h3><p>在各大游戏的技能树里，不乏一下单纯是为了凑数而凑数的选项。比如生命值上限、魔法上限、攻击力提升、防御力提升。当然，这可能是设计者所设计的成长的一部分，但是将这样的东西放进技能树里不仅会让玩家显得有种凑数的感觉，更会降低技能树这个系统的存在意义。</p>
+<blockquote>
+<p>技能树上尽量不要出现玩家已经拥有的能力。</p>
+</blockquote>
+<p>繁多而无意义的设计会让技能树变得庞大而臃肿，相对于看上去像无人森林一样枝干令人目不暇接的技能树，精心裁剪、紧凑有趣的技能树往往更加有趣。</p>
+<h3 id="技能点的获取"><a href="#技能点的获取" class="headerlink" title="技能点的获取"></a>技能点的获取</h3><p>主线流程，随着剧情获取。一般用于线性剧情向。</p>
+<p>地图世界散布，探索获得，鼓励探索。多用于开放世界类。</p>
+<p>技能点的获取其实是一种引导，技能树既然是告诉玩家游戏的终点之所在，那么获取技能点的方式则是玩家游戏过程中的重要部分。有时候玩家会为了解锁某一个看上去并不怎么使用但是很炫酷的技能而花费时间，只要让这些时间不那么枯燥很多玩家还是很愿意去做的。</p>
+<h3 id="技能界面的设计"><a href="#技能界面的设计" class="headerlink" title="技能界面的设计"></a>技能界面的设计</h3><p>技能界面的很大一个问题就是很破坏游戏的代入沉浸感，毕竟大多数游戏的技能界面都和游戏本身显得有些格格不入。如何将技能界面通过结合游戏的背景世界观巧妙地展示给玩家也是一个值得思考的问题。</p>
+<h3 id="有趣的设想"><a href="#有趣的设想" class="headerlink" title="有趣的设想"></a>有趣的设想</h3><p>让一个技能同时具有正面和负面效果，可以让玩家牺牲某种风格来强化某种风格。</p>
+<p>让技能之间相互关联，比如技能连携、后期技能可以让前期学到的技能有新的打开方式甚至改变用法。</p>
+<p>有限的技能槽位，通过闲置主动技能的个数来让玩家进一步思考技能的选择（快进到手搓光）</p>
+<h1 id="点燃动作之魂"><a href="#点燃动作之魂" class="headerlink" title="点燃动作之魂"></a>点燃动作之魂</h1><p>判断一家游戏工作室/公司是否具有优秀的动作设计理念，首先要确认的就是这家工作室/公司是否涉及拳脚动作，因为无论是什么动作游戏，都是从最基础的走跑跳这三个动作开始设计角色的。</p>
+<p>而一个动作游戏里的角色是否设计的足够合理，除了体现在敌人的强度上，更多的体现在动作的机制中。如果一个角色具有聚怪、AOE、高伤害等多重判定的攻击招式，且攻击机制十分简单（俗称一键连招），那么这个角色一般会被归类于割草型的角色。</p>
+<p>优秀的动作游戏设计必须避开角色过于超模的设计，或者说是角色动作机制过于超模的设计，除非是角色定位本身就是割草型，不然这样的设计只会拖垮整个游戏的整体节奏。</p>
+<p>如果角色设计的足够强力，那么就可以无视游戏机制，怪打怪的，我打我的，自身的优势无限扩大，怪物毫无还手之力，这样的设计是动作游戏里的大忌。</p>
+<p>如果发动一次强大的攻击不需要玩家支付相对应的代价，那么游戏的平衡性就失去了意义。举个简单的例子，鬼泣的真升龙。虽然大招需要前置/蓄力这样的设计理念是谁首创已经无法得知了，但是无论是厂商还是玩家都有不言而明的默契：凡是蓄力必是大招。这样的设计相当有趣，因为在蓄力的过程中你无法做其他的事情，否则会打断你的蓄力，你的目标也就无法达成。而当你冒着站桩蓄力被打断的代价完成蓄力后，你也会会的足够的回报，而如何抓住最好的时机来让自己的风险下降到最低，这就是玩家们需要仔细研究的课题了。</p>
+<p>当然，除了蓄力之外，也可以通过复杂的招式设计来达成类似于蓄力的效果。通过不同按键的搭配来让招式的派生变得复杂，也让招式的机动性更加丰富，这就是优秀的设计理念。动作游戏的设计初衷，就是让玩家在不断的战斗中变强，而在一个角色被设计完毕加入游戏之后，他的上限就已经决定了（指客观存在，设计者自身是否完全清楚不在考虑范围内），而玩家能到达怎样的高度就取决于玩家的开发。</p>
+<p>因此作为点燃动作之魂的引领着，炽翎和白夜的设计不可谓不好。而作为对立面的第六夜想曲就有着不可忽视的缺陷了。上述的一键连招对其真是一个再好不过的形容，将大量的机制寄托于一个攻击动作里，虽然让人玩起来很轻松加愉快，但是这样暴露了其设计理念的缺陷。</p>
+<blockquote>
+<p>插播一个视频</p>
+<p>我不想学瞬大啦.jpg</p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1AV411B7Xp">[崩坏3]白夜,你是我认可的女武神!</a></p>
+</blockquote>
+<h1 id="学习成本"><a href="#学习成本" class="headerlink" title="学习成本"></a>学习成本</h1><p>之所以会在游戏里提到学习成本这个词，是因为（几乎？）所有的游戏都遵循着：“学习后会有所成长”这条准则，不管是单机游戏的多周目，竞技类类游戏场次多起来之后，玩家能够明显的感觉到自己相较于初见时的变化。</p>
+<p>当然，不同的游戏具有不同的学习曲线，有的很快有的很慢。以传统动作游戏为例，玩家的学习曲线相较于其他游戏明显陡峭很多。打开游戏，半个小时熟悉操作，一周一周目打通，一个月最高难度通关。当然这样的节奏针对的是普通玩家，要是是具有一定功底的非纯新人玩家，这个时间可能会快上很多。</p>
+<p>作为游戏设计者，大多数时候你当然会想让玩家花更多时间在你的游戏上，也即是提高游戏的学习成本，那应该怎么做呢？提高游戏系统深度、丰富机制多样性、提高游戏操作上限，似乎都说得通。但是必须额外考虑到一个问题：玩家是否愿意支付这样的学习成本？</p>
+<p>其中易学难精上限高、难学难精上限高这两种情况要考虑因素都大同小异。</p>
+<p>操作难度往往是一个游戏学习成本的门槛，作为动作游戏来说，一个手柄完全可以覆盖所有的操作，当然对于手柄新人来说可能需要花费一些额外的时间来适应键盘带来的习惯。而衡量一个游戏的游戏成本的标准，我认为是游戏通关所需要的时间，就是在网游里，玩家能够通关当前版本最高难度的副本也称之为“毕业”。（当然不是最近各大公司所说的那种“毕业”。</p>
+<p>另外一个区分游戏学习成本高低的指标是：学习成本的传递方式。通俗一点就是一个玩家在接触游戏后，能在多长时间内了解清楚自己应该去提升哪个方面的技巧。也就是不会花了很多时间结果发现自己还是啥都不会，一碰就碎。</p>
+<p>这种传递方式所带来的障碍可能是游戏本身给的，也有可能是玩家群体带来的。比方说游戏内的引导做的很差，甚至出招表都没有；硬核玩家打出的电影级Boss战演出，让普通新手玩家叹为观止的同时也起了退缩的心。不过这也是没办法的事，毕竟核心玩家群体的需求摆在那里，不可能为了可能的预受众中就去放弃既有的玩家群体，设计者只能尝试去满足不同玩家的需求体验。</p>
+<blockquote>
+<p>任何一个玩家，只要是真心喜欢游戏，早晚会变成核心玩家，学习成本也只是一个代价， 我希望大家都能跨越这个代价，表现出就像是攻克人生中一个又一个的难题一样的坚定。</p>
+</blockquote>
+<h1 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h1><p><a target="_blank" rel="noopener" href="https://space.bilibili.com/4495949/channel/seriesdetail?sid=259768">ACT玩家说-共赴噩梦</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Tf4y1M7mH?spm_id_from=444.41.0.0">深度、精通、然后《绝对征服》</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Ks411B7jH">如何制作一款白金质量的动作游戏【白金工作室经验分享】</a></p>
+<p><a target="_blank" rel="noopener" href="https://indienova.com/indie-game-development/player-psychology-analysis-in-action-combat/">ACT 战斗系统中的玩家心理分析</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12t411S7QX">【游戏制作工具箱】如何设计更好的技能树</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1hE411e7GG">【炽翎/白夜】从动作设计理念谈米哈游动作设计的巅峰女武神</a></p>
+<span id="more"></span>
+
+<hr>
+<p>The story is not over.</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">BlockedByRain</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blockedbyrain.github.io/2022/02/22/note/about-ACT/">https://blockedbyrain.github.io/2022/02/22/note/about-ACT/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blockedbyrain.github.io" target="_blank">尼伯龙根</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E8%AE%BE%E8%AE%A1/">游戏设计</a></div><div class="post_share"><div class="social-share" data-image="/images/posts/note/about-ACT/head.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/01/note/combat-work-notes/"><img class="prev-cover" src="/images/topimg/1.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">有关战斗的工作笔记</div></div></a></div><div class="next-post pull-right"><a href="/2022/02/10/note/Genshin-damage/"><img class="next-cover" src="/images/posts/note/Genshin-damage/critical.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">原神的伤害计算</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/12/01/note/about-critical-hit/" title="关于暴击"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-01</div><div class="title">关于暴击</div></div></a></div><div><a href="/2022/03/01/note/combat-work-notes/" title="有关战斗的工作笔记"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-03-01</div><div class="title">有关战斗的工作笔记</div></div></a></div><div><a href="/2022/02/10/note/first-step-to-great-design/" title="游玩一切：伟大设计的第一步"><img class="cover" src="/images/posts/note/first-step-to-great-design/play-all-the-things.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-02-11</div><div class="title">游玩一切：伟大设计的第一步</div></div></a></div><div><a href="/2021/12/02/note/game-design-practice/" title="游戏设计修行"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-02</div><div class="title">游戏设计修行</div></div></a></div><div><a href="/2021/12/15/note/show-your-game/" title="如何展示你的游戏Demo"><img class="cover" src="/images/topimg/1.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-15</div><div class="title">如何展示你的游戏Demo</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/images/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">BlockedByRain</div><div class="author-info__description">或许是不知梦的缘故，流离之人追逐幻影</div></div><div class="card-info-data is-center"><div class="card-info-data-item"><a href="/archives/"><div class="headline">文章</div><div class="length-num">31</div></a></div><div class="card-info-data-item"><a href="/tags/"><div class="headline">标签</div><div class="length-num">19</div></a></div><div class="card-info-data-item"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/BlockedByRain" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1596127831@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">冀以尘雾之微补益山海，荧烛末光增辉日月</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9E%81%E5%B0%8F%E6%AD%BC%E7%81%AD%E5%9C%88"><span class="toc-number">2.</span> <span class="toc-text">极小歼灭圈</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E5%AF%BCBOSS"><span class="toc-number">3.</span> <span class="toc-text">引导BOSS</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#BOSS%E6%88%98"><span class="toc-number">4.</span> <span class="toc-text">BOSS战</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6%E5%92%8C%E7%B2%BE%E9%80%9A"><span class="toc-number">5.</span> <span class="toc-text">深度和精通</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B1%E5%BA%A6"><span class="toc-number">5.1.</span> <span class="toc-text">深度</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E5%BF%83%E8%80%85-Learner"><span class="toc-number">5.2.</span> <span class="toc-text">初心者 Learner</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%8E%A9%E5%AE%B6-Player"><span class="toc-number">5.3.</span> <span class="toc-text">玩家 Player</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#combo-and-chain-%E7%BB%84%E5%90%88%E4%B8%8E%E8%BF%9E%E9%94%81"><span class="toc-number">5.3.1.</span> <span class="toc-text">combo and chain 组合与连锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B2%BE%E9%80%9A%E8%80%85-Master"><span class="toc-number">5.4.</span> <span class="toc-text">精通者 Master</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%AE%E7%97%A7%E7%9A%84%E8%89%BA%E6%9C%AF"><span class="toc-number">5.4.1.</span> <span class="toc-text">刮痧的艺术</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#QTE"><span class="toc-number">6.</span> <span class="toc-text">QTE</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%93%E5%87%BB%E6%84%9F"><span class="toc-number">7.</span> <span class="toc-text">打击感</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A5%E6%BA%90"><span class="toc-number">7.1.</span> <span class="toc-text">来源</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AC%E8%A7%89"><span class="toc-number">7.1.1.</span> <span class="toc-text">听觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%86%E8%A7%89"><span class="toc-number">7.1.2.</span> <span class="toc-text">视觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A6%E8%A7%89"><span class="toc-number">7.1.3.</span> <span class="toc-text">触觉</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E4%B8%8D%E6%98%93%E8%A7%89%E5%AF%9F%E7%9A%84%E5%8F%8D%E9%A6%88%E7%82%B9"><span class="toc-number">7.1.4.</span> <span class="toc-text">一些不易觉察的反馈点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">7.2.</span> <span class="toc-text">目的</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ARPG%E5%92%8CACT"><span class="toc-number">8.</span> <span class="toc-text">ARPG和ACT</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AA%E7%8B%BC%E4%B8%8E%E9%AC%BC%E6%B3%A3%E7%9A%84%E6%88%98%E6%96%97%E8%8A%82%E5%A5%8F"><span class="toc-number">8.1.</span> <span class="toc-text">只狼与鬼泣的战斗节奏</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ACT%E7%9A%84%E7%88%BD%E7%82%B9"><span class="toc-number">9.</span> <span class="toc-text">ACT的爽点</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9A%B4%E5%8A%9B"><span class="toc-number">9.1.</span> <span class="toc-text">暴力</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%8F%91%E8%AE%BE%E8%AE%A1"><span class="toc-number">9.1.1.</span> <span class="toc-text">引发设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%89%93%E5%87%BB%E6%84%9F%EF%BC%8C%E4%B8%8D%E5%A4%9A%E8%B0%88"><span class="toc-number">9.1.1.1.</span> <span class="toc-text">打击感，不多谈</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A0%B4%E5%9D%8F%E7%94%9F%E7%89%A9%E8%82%A2%E4%BD%93%E6%88%96%E5%BB%BA%E7%AD%91"><span class="toc-number">9.1.1.2.</span> <span class="toc-text">破坏生物肢体或建筑</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E8%AE%A4%E5%90%8C"><span class="toc-number">9.2.</span> <span class="toc-text">自我认同</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%8F%91%E8%AE%BE%E8%AE%A1-1"><span class="toc-number">9.2.1.</span> <span class="toc-text">引发设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E5%8D%87%E9%9A%BE%E5%BA%A6"><span class="toc-number">9.2.1.1.</span> <span class="toc-text">提升难度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%BC%BA%E5%8F%8D%E9%A6%88"><span class="toc-number">9.2.1.2.</span> <span class="toc-text">增强反馈</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E6%AC%B2"><span class="toc-number">9.3.</span> <span class="toc-text">控制欲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E5%8F%91%E8%AE%BE%E8%AE%A1-2"><span class="toc-number">9.3.1.</span> <span class="toc-text">引发设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%87%AA%E6%88%91%E6%8E%A7%E5%88%B6"><span class="toc-number">9.3.1.1.</span> <span class="toc-text">自我控制</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%8C%E4%BA%BA%E6%8E%A7%E5%88%B6"><span class="toc-number">9.3.1.2.</span> <span class="toc-text">敌人控制</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%80%E8%83%BD%E6%A0%91"><span class="toc-number">10.</span> <span class="toc-text">技能树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E5%A4%84"><span class="toc-number">10.1.</span> <span class="toc-text">用处</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BE%AA%E5%BA%8F%E6%B8%90%E8%BF%9B%E7%9A%84%E5%B1%95%E7%A4%BA%E6%B8%B8%E6%88%8F%E7%9A%84%E5%A4%8D%E6%9D%82%E6%80%A7"><span class="toc-number">10.1.1.</span> <span class="toc-text">循序渐进的展示游戏的复杂性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%90%E9%95%BF"><span class="toc-number">10.1.2.</span> <span class="toc-text">成长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E6%A0%87"><span class="toc-number">10.1.3.</span> <span class="toc-text">目标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%93%E9%AA%8C%E6%96%B9%E5%90%91"><span class="toc-number">10.1.4.</span> <span class="toc-text">体验方向</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E9%87%8F"><span class="toc-number">10.1.5.</span> <span class="toc-text">工作量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E9%97%AE%E9%A2%98%E4%B8%8E%E5%8F%AF%E8%83%BD%E7%9A%84%E6%94%B9%E8%BF%9B%E6%96%B9%E5%BC%8F"><span class="toc-number">10.2.</span> <span class="toc-text">设计问题与可能的改进方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E8%B6%B3%E5%A4%9F%E7%9A%84%E9%80%89%E6%8B%A9%E6%9D%83%E8%A1%A1%E6%80%A7"><span class="toc-number">10.2.1.</span> <span class="toc-text">没有足够的选择权衡性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B9%8F%E5%91%B3%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">10.2.2.</span> <span class="toc-text">乏味的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E8%83%BD%E7%82%B9%E7%9A%84%E8%8E%B7%E5%8F%96"><span class="toc-number">10.2.3.</span> <span class="toc-text">技能点的获取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8A%80%E8%83%BD%E7%95%8C%E9%9D%A2%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">10.2.4.</span> <span class="toc-text">技能界面的设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E8%AE%BE%E6%83%B3"><span class="toc-number">10.2.5.</span> <span class="toc-text">有趣的设想</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%82%B9%E7%87%83%E5%8A%A8%E4%BD%9C%E4%B9%8B%E9%AD%82"><span class="toc-number">11.</span> <span class="toc-text">点燃动作之魂</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E6%88%90%E6%9C%AC"><span class="toc-number">12.</span> <span class="toc-text">学习成本</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%95%E7%94%A8"><span class="toc-number">13.</span> <span class="toc-text">引用</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/08/19/time/24-years-old/" title="24-years-old"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="24-years-old"/></a><div class="content"><a class="title" href="/2025/08/19/time/24-years-old/" title="24-years-old">24-years-old</a><time datetime="2025-08-19T16:32:00.000Z" title="发表于 2025-08-20 00:32:00">2025-08-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/07/time/2025-half/" title="2025-half"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025-half"/></a><div class="content"><a class="title" href="/2025/07/07/time/2025-half/" title="2025-half">2025-half</a><time datetime="2025-07-07T15:04:58.000Z" title="发表于 2025-07-07 23:04:58">2025-07-07</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙"><img src="/images/topimg/images/posts/time/2024-total/Y2025.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024年终自我枪毙"/></a><div class="content"><a class="title" href="/2024/12/23/time/2024-total/" title="2024年终自我枪毙">2024年终自我枪毙</a><time datetime="2024-12-23T15:03:30.000Z" title="发表于 2024-12-23 23:03:30">2024-12-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山"><img src="/images/topimg/0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="出山"/></a><div class="content"><a class="title" href="/2024/11/26/time/come-out-from-the-mountains/" title="出山">出山</a><time datetime="2024-11-26T17:19:59.000Z" title="发表于 2024-11-27 01:19:59">2024-11-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/08/18/essay/MyGO/" title="MyGO"><img src="/images/posts/essay/MyGO/image-20240818041546407.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="MyGO"/></a><div class="content"><a class="title" href="/2024/08/18/essay/MyGO/" title="MyGO">MyGO</a><time datetime="2024-08-18T15:42:57.000Z" title="发表于 2024-08-18 23:42:57">2024-08-18</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2025 By BlockedByRain</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

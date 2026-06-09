@@ -1,5 +1,5 @@
 ---
-title: 2025-total
+title: 2025年终自我枪毙
 date: 2026-01-03 21:52:29
 tags:
 	年终
@@ -7,9 +7,9 @@ tags:
 categories:
 	时光
 top_img:
-	/images/topimg/images/posts/time/2024-total/Y2025.jpg
+	/images/topimg/Y2025.jpg
 cover:
-	/images/topimg/images/posts/time/2024-total/Y2025.jpg
+	/images/topimg/Y2025.jpg
 ---
 
 # 前言
